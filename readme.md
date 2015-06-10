@@ -8,7 +8,7 @@ Notes from weekly research meetings can be found [here](./Meeting-Notes.md)
 * A link to my [Zotero Profile](http://www.zotero.org/munkm/) 
 * A link to the dropbox folder containing .pdfs of the [papers in the lit review](https://www.dropbox.com/sh/bmopprr0x2kcew2/AAARvvlMBbxyE6Rc1d4jsckfa?dl=0)
 
-[Weekly Updates](./Weekly-Updates.md) is a place where my work progress each week is tracked and recorded.
+[Weekly Updates](./Weekly-Updates.md) is a place where the work progress each week from both Garrett and Madicken is tracked and recorded.
 
-![Placekitten Fun]
-(http://placekitten.com/g/700/500) 
+![Khaleeeeeesssiiiiiiiii]
+(http://i.imgur.com/mM40QYf.jpg) 
