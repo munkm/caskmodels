@@ -1,4 +1,4 @@
-This is Madicken's research page. It is a place where magical things happen. Sometimes. 
+This is the research page for the Cask Modelling project. It is a place where very magical things will happen. Often. 
 ***
 [Here](https://www.dropbox.com/sh/k5k7nolcunku3w5/AADsxssoypRnfLcXZ2k5zFQJa?dl=0) is a  link to the Dropbox folder where my student paperwork is located. 
 
