@@ -4,7 +4,7 @@ This is the research page for the Cask Modelling project. It is a place where ve
 
 Notes from weekly (Monday 10am-12pm, Chase building) research meetings can be found [here](./Meeting-Notes.md)
 
-[Notes](./Notes.md) is a page where documents and information relevant to hte project are summarized and linked. 
+[Notes](./Notes.md) is a page where documents and information relevant to the project are summarized and linked. 
 
 [Weekly Updates](./Weekly-Updates.md) is a place where the work progress each week from both Garrett and Madicken is tracked and recorded.
 
