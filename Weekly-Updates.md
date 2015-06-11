@@ -1,14 +1,18 @@
 ### Update List
 * [Update: 2015/06/11](#update-20150611)
 * [Sample Update: 2000/01/01](#update: 2000/01/01)
+
 ***
+
 ### Update: 2015/06/11
 **Goals from last time:**
+
 **Other Updates:**
 
 
 ### Update: 2000/01/01
-* Author: Madicken
+Author: Madicken
+
 **Notes:**
 * This is really just a sample update so you have an idea of what subsections you might want to include in an update. You by no means need to follow this strictly; feel free to add or remove sections as you feel fit. 
 * This update is written in markdown, which isn't too hard once you get used to the formatting. I've included two links for reference.
