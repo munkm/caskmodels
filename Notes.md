@@ -13,3 +13,11 @@
 
 ***
 
+### Cask SARs
+The following are all various different versions and excerpts of the Safety Analysis Report (SAR) for the NAC International UMS Universal Storage System.
+These documents were all retrieved from the [NRC ADAMS](http://www.nrc.gov/reading-rm/adams.html) system. Documents are named by their corresponding NRC accession number;
+this number can be used to find the documents in the ADAMS system. These documents were used to develop the cask input of the Vertical Concrete Cask (VCC) overpack.
+* [ML012150409] (../gh-pages/Docs/ML012150409.pdf): This document contains Chapter 1 of the SAR, which includes a lot of non-engineering drawings of the cask system useful for reference. This documents also contains major dimensions of the cask in Table format (Table 1.2-1).
+
+***
+
