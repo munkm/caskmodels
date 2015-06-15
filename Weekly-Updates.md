@@ -15,7 +15,7 @@
   * Added shield plug and cask lid to model
 * Template Engine
   * Test ran TemplateEngine in cmd and was able to produce the same input we were provided with.
-  * Determined best way to integrate VCC cask model with existing subtemplate by using the "<analysis_type>" key.
+  * Determined best way to integrate VCC cask model with existing subtemplate by using the "analysis_type" key.
 
   
 **Questions:**
