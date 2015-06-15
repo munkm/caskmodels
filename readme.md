@@ -12,4 +12,4 @@ Notes from weekly (Monday 10am-12pm, Chase building) research meetings can be fo
 (http://i.imgur.com/mM40QYf.jpg)
 
 ![Testing some shizzzz]
-(http://munkm.github.io/caskmodels/Transfer_top.png) 
+(http://munkm.github.io/caskmodels/Images/Transfer_top.png) 
