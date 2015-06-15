@@ -9,4 +9,7 @@ Notes from weekly (Monday 10am-12pm, Chase building) research meetings can be fo
 [Weekly Updates](./Weekly-Updates.md) is a place where the work progress each week from both Garrett and Madicken is tracked and recorded.
 
 ![Khaleeeeeesssiiiiiiiii]
-(http://i.imgur.com/mM40QYf.jpg) 
+(http://i.imgur.com/mM40QYf.jpg)
+
+![Testing some shizzzz]
+(http://munkm.github.io/caskmodels/Transfer_top.png) 
