@@ -1,50 +1,25 @@
 ### Meeting List
-* [Meeting: 2014/10/15](#meeting-20141015)
-* [Meeting: 2014/10/1](#meeting-20141001)
-* [Meeting: 2014/09/24](#meeting-20140924)
-* [Meeting: 2014/09/10](#meeting-20140910)
+* [Metting: 2015/06/15](#meeting-20150615)
 
 ***
 
-### Meeting: 2014/10/15
-Main Notes: 
-ANS meeting:
-* Math & Comp Program Sunday 1-2, 2-4 exec. 
-* Reactor Physics Program Sunday 2-4, 4-6 exec.
-* Need committee meeting (After presidents reception)
-  * Gives financial need based scholarships
-  * Programs that help try to promote diversity in nuclear engineering. 
-* Young members group Monday 11:30-1.
+### Meeting: 2015/06/15
+Main Notes:
+* Github page is well on its way to being a repository for useful (publicly available) information on the project. 
+  * Talked about linking inline images and .pdfs with the gh-pages branch (refer to munkm.github.io/caskmodels/.....) to do this. 
+* Garrett added airflow pipes to the top of the cask. 
+  * Garrett thinks that most of the geometry is done. 
+    * Should we add rebar structuring inside the concerete overpack in the model? 
+      * Is this something ORNL would want? I don't see it affecting transport significnatly. 
+      * Maybe need to look in to how frequently the rebar lattices occur axially. 
 
 Other things:
-* In terms of background stuff, start with rachel's thesis background, and then go to exhinilation methods. 
-* Read one of the Larsen papers printed in binder. 
-
-### Meeting: 2014/10/01
-Main Notes:
-* Plan for next week seems appropriate. 
-* Lit review notes will be in LaTex
-* Future meetings will be at 2:30 for now, since right after the neutronics group meeting left both parties a bit hangry. 
-* Of interest: there are two main 'camps' that address finding global solutions in MC. The LIFT method takes the zero variance approach, but other methods try to evenly distribute the particles. 
-  * FW CADIS is sort of a hybrid of both methods. 
-
-Other Suggestions:
-* change home.md to readme.md so it is automatically rendered.
-* on readme.md add a link to personal Zotero page
-* GHPages branch will automatically render pages, but it needs to be uploaded as a .pdf. If you want rendered versions of things, you can put the pdfs in this branch and they will be available on your github webpage. 
-  * maybe this can be a good way to test out makefiles, since I can have the .pdfs update every time i update the .tex documents.  
+* If Garrett runs out of modelling things to do:
+  * Make a document in github page that summarizes the following:
+    * What was the trasnportation cask that we were given? Fuel type? Burnup? Where was it from?
+    * What is the dry cask information that you obtained from ADAMS? What is the type/manufacturer of that cask? (I know you've basically summarized this elsewhere, but it will be useful to put it all in the same place.)
+    * What changes did you make from the transportation cask to get to the dry cask model? Just generally summarize this. 
+* We need to find out if we'll just be using Advantg or both Advantg and Mavric. 
+  * If we are just using Advantg, then MCNP is the monte carlo code we'll be using. We need to find a way to convert a scale input to an MCNP input for our project.  
 
 
-### Meeting: 2014/09/24
-* Eventually thesis readings will be necessary. A few relevant theses:
-  * John Wagner's thesis -- CADIS
-  * Scott Turner's thesis -- LIFT method
-
-
-### Meeting: 2014/09/10
-* Aim for review paper by the end of the semester
-* First four papers to read:
-  * Cooper and Larsen
-  * CADIS and FW CADIS
-  * Avatar
-  * ORNL TM rev 12, Consistent Adjoint-driven
