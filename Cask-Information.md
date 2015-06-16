@@ -4,7 +4,7 @@ is a model of the UMS Universal Transport Cask. This is a cask designed to hold 
 i.e. rail transport. The cannister modeled is named the TSC-1 cannister. This is a cannister designed to hold PWR fuel assemblies.
 The Transport Cask was modeled using dimensions that correspond to the TSC-1 cannister.
 * The TSC-1 can hold 24 PWR fuel assemblies. The fuel composition and the source used in the input corresponds to a given loading map presented in
-the table below. The material composition of the fuel is a fresh UO2 composition.  The source terms were generated using the ORIGAMI code. This generates binary source files for each of the assemblies which are imported
+the table below. The material composition of the fuel is a fresh UO2 composition.  The source terms were generated using the ORIGAMI code. This generates binary source files for each of the assemblies, which are imported
 by the SCALE input. All source terms are decayed to May 6th, 2015.
 
 | Position | Assembly_id | Burnup (MWd/MTU) | Enrichment | Discharge Date |
@@ -59,9 +59,12 @@ the only modification required was to create a new sub-template for the VCC over
  the same as the original transfer cask model.
 
 **Main Features of the VCC Cask*
-* The VCC overpack is primarily made of concrete 28 inches thick, with an inner steel liner 2.5 inches thick. At the bottom of the cask is a steel structure called the base weldment. This acts as both a support for the cannister
+* The VCC overpack is primarily made of concrete 28 inches thick, with an inner steel liner 2.5 inches thick. 
+* At the bottom of the cask is a steel structure called the base weldment. This acts as both a support for the cannister
  and a structure that directs air from the air inlets. 4 air inlets are connected to the base weldment and protrude through the concrete overpack to pass air from outside to inside the cask, to pass upwards through the annulus of air
- formed between the cannister and the cask. At the top of the cask are 4 air outlet passages. These are offset 45 degrees from the air inlets at the bottom of the cask. The air outlets are a labyrinth, steel-lined passage that allows
- air to pass from inside the cask to the outside, while minimizing radiation streaming. The top of the cask has a 2 inch thick steel lid. Sandwiched beneath the lid and above the TSC-1 cannister is the shield plug. This is a 5 inch thick
+ formed between the cannister and the cask. 
+* At the top of the cask are 4 air outlet passages. These are offset 45 degrees from the air inlets at the bottom of the cask. The air outlets are labyrinth, steel-lined passages that allow
+ air to pass from inside the cask to the outside, while minimizing radiation streaming.
+* The top of the cask has a 2 inch thick steel lid. Sandwiched beneath the lid and above the TSC-1 cannister is the shield plug. This is a 5 inch thick
  cylindrical plug made of carbon steel and neutron absorbing material. The shield plug sits on top of a support ring on the inner diameter of the steel liner, just above the TSC-1 cannister top.
 

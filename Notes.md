@@ -16,7 +16,7 @@
 
 ***
 
-### Cask SARs
+### VCC (Dry Cask) SARs
 The following are all various different versions and excerpts of the Safety Analysis Report (SAR) for the NAC International UMS Universal Storage System.
 These documents were all retrieved from the [NRC ADAMS](http://www.nrc.gov/reading-rm/adams.html) system. Documents are named by their corresponding NRC accession number;
 this number can be used to find the documents in the ADAMS system. These documents were used to develop the cask input of the Vertical Concrete Cask (VCC) overpack.
