@@ -8,14 +8,29 @@ Attendees:
 * Rachel, Garrett, Madicken
 
 Main Notes:
+* garrett described the documents that he found on the ATOMS database on the "notes" page. 
+* Garrett also described his progress on converting the transport model to a dry cask model. It looks AWESOME. 
+* Garrett has been experimenting with making subtemplates 
 
 Other Things:
 * Do we want to do hybrid modelling of the casks with Advantg?
   * If so, how do we convert the scale input to an MCNP input? 
     * Should Madicken e-mail ORNL?
+  * Decision: E-mail ORNL/Tara to see if a converter exists. 
+  * Worst case: use scale to make a source term, then use that source term as a surface source in the MCNP model. 
 * What stuff is 'okay' to put up on the github repo? Drawings without scale/material info? Original enrichment info?
-  * In general ......
-* What level of fidelity should we be adding to the dry cask model? Include rebar substrucutre? 
+  * Decision: Move all potentially sensitive documents to a private repo. 
+* What level of fidelity should we be adding to the dry cask model? Include rebar substrucutre?
+  * Decision: e-mail kaushik
+
+To Do:
+* Madicken: Make private repo to store sensitive documents.  
+* Madicken: E-mail kaushik and ask him if he wants the rebar strucutring in the model. 
+  * Also ask if they maybe just want the information and the high fidelity model isn't necessary right now. 
+* Madicken: Send e-mail to tara to confirm if a scale to mcnp converter exists, and how to obtain one. 
+* Garrett: find out what parameters you need to run the scale model. 
+* Garrett: Start figuring out how to do a surface tally in mavric or keno (maybe only for criticality) or monaco. Probably for mavric to get the source description. So that when we actually get the software on the cluster we'll be ready to run. 
+* Garret: (Far future plans) -- help madicken with simple test problems for the hybrid method. 
 
 ### Meeting: 2015/06/15
 Main Notes:
