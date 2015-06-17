@@ -3,6 +3,20 @@
 
 ***
 
+### Meeting 2015/06/17
+Attendees:
+* Rachel, Garrett, Madicken
+
+Main Notes:
+
+Other Things:
+* Do we want to do hybrid modelling of the casks with Advantg?
+  * If so, how do we convert the scale input to an MCNP input? 
+    * Should Madicken e-mail ORNL?
+* What stuff is 'okay' to put up on the github repo? Drawings without scale/material info? Original enrichment info?
+  * In general ......
+* What level of fidelity should we be adding to the dry cask model? Include rebar substrucutre? 
+
 ### Meeting: 2015/06/15
 Main Notes:
 * Github page is well on its way to being a repository for useful (publicly available) information on the project. 
