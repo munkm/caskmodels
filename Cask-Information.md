@@ -58,13 +58,18 @@ the only modification required was to create a new sub-template for the VCC over
  as the analysis_type value. The "VCC" will instruct the Template Engine to insert the VCC sub-template as the overpack geometry when constructing the SCALE input. The TSC-1 cannister and everything else inside remained
  the same as the original transfer cask model.
 
-**Main Features of the VCC Cask*
+**Main Features of the VCC Cask**
 * The VCC overpack is primarily made of concrete 28 inches thick, with an inner steel liner 2.5 inches thick. 
 * At the bottom of the cask is a steel structure called the base weldment. This acts as both a support for the cannister
  and a structure that directs air from the air inlets. 4 air inlets are connected to the base weldment and protrude through the concrete overpack to pass air from outside to inside the cask, to pass upwards through the annulus of air
  formed between the cannister and the cask. 
 * At the top of the cask are 4 air outlet passages. These are offset 45 degrees from the air inlets at the bottom of the cask. The air outlets are labyrinth, steel-lined passages that allow
  air to pass from inside the cask to the outside, while minimizing radiation streaming.
-* The top of the cask has a 2 inch thick steel lid. Sandwiched beneath the lid and above the TSC-1 cannister is the shield plug. This is a 5 inch thick
+* The top of the cask has a 2 inch thick steel lid. Sitting in the space beneath the lid and above the TSC-1 cannister is the shield plug. This is a 5 inch thick
  cylindrical plug made of carbon steel and neutron absorbing material. The shield plug sits on top of a support ring on the inner diameter of the steel liner, just above the TSC-1 cannister top.
+ 
+**Changes to Material Composition Sub-template**
+* All cask material compositions are supplied by the "UMS-24-CaskMaterials.tmpl" sub-template. The only material compositions that were missing from this file needed to make the VCC cask were carbon steel and concrete.
+ These material compositions were added to this sub-template file. The carbon steel composition provided in the SAR was used. The concrete composition provided in the SAR was almost identical to the built-in SCALE
+ "reg-concrete" composition, so the built-in compostion was used.
 
