@@ -1,5 +1,6 @@
 ### Meeting List
 * [Meeting: 2015/06/15](#meeting-20150615)
+* [Meeting: 2015/06/17](#meeting-20150617)
 
 ***
 
@@ -8,7 +9,7 @@ Attendees:
 * Rachel, Garrett, Madicken
 
 Main Notes:
-* garrett described the documents that he found on the ATOMS database on the "notes" page. 
+* Garrett described the documents that he found on the ADAMS database on the "notes" page. 
 * Garrett also described his progress on converting the transport model to a dry cask model. It looks AWESOME. 
 * Garrett has been experimenting with making subtemplates 
 
@@ -20,7 +21,7 @@ Other Things:
   * Worst case: use scale to make a source term, then use that source term as a surface source in the MCNP model. 
 * What stuff is 'okay' to put up on the github repo? Drawings without scale/material info? Original enrichment info?
   * Decision: Move all potentially sensitive documents to a private repo. 
-* What level of fidelity should we be adding to the dry cask model? Include rebar substrucutre?
+* What level of fidelity should we be adding to the dry cask model? Include rebar sub-structure?
   * Decision: e-mail kaushik
 
 To Do:
