@@ -1,8 +1,8 @@
 ### Transportation Cask Images
-* The transportation cask images and their descriptions are in the [private repo](http://munkm.github.io/caskmodels_private/Images)
+* The transportation cask images and their descriptions are in the [private repo](https://github.com/munkm/caskmodels_private/blob/master/Notes.md)
 
 ### Dry Cask Images
-* Any images of the dry cask storage is fine to put on the public site. They have been changed according to public documents (see below). Any images of the transportation cask and modifications before the final dry cask are on the [private repo](http://munkm.github.io/caskmodels_private/Images)
+* Any images of the dry cask storage is fine to put on the public site. They have been changed according to public documents (see below). Any images of the transportation cask and modifications before the final dry cask are on the [private repo](https://github.com/munkm/caskmodels_private/blob/master/Notes.md)
 
 ***
 

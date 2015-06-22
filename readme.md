@@ -1,5 +1,7 @@
 This is the research page for the Cask Modelling project. It is a place where very magical things will happen. Often. 
 ***
+A link to the private repo is [here](https://github.com/munkm/caskmodels_private)
+
 Notes from weekly (Monday 10am-12pm, Chase building) research meetings can be found [here](./Meeting-Notes.md)
 
 [Notes](./Notes.md) is a page where documents and information relevant to the project are summarized and linked. 
