@@ -1,8 +1,37 @@
 ### Meeting List
+* [Meeting: 2015/06/22](#meeting-20150622)
 * [Meeting: 2015/06/15](#meeting-20150615)
 * [Meeting: 2015/06/17](#meeting-20150617)
 
 ***
+
+### Meeting 2015/06/22
+Attendees: 
+* Garrett, Madicken
+* Refer to Weekly Updates 2015/06/19 for what these notes respond to. 
+
+Main Notes:
+* Garret described issues of compatibility for an RSSA file for the surface source.
+  * To do:
+    * Find out if scale can produce an RSSA file that is compatibile with MCNP
+    * Can the RSSA file from scale be used for an MCNP surface source?
+* Recursive point testing
+  * Uses smaller and smaller blocks until each block contains only one material (up to some threshold value). It is a way of defining a geometry. 
+* Find out how Advantg and mavric use Denovo. What are their default parameters?
+* We will probably start with a cylindrical mesh tally for the cask models, but we will likely test both cylindrical and rectangular meshes for the caracterization of the method itself.
+* Depending on the size of the MG library that you use for the forward calculation, that will influence how it bins the particles by energy group while you're tallying. 
+  * When you're running mavric and doing the adjoint transport. When it creates the adjoint source it generates the 'adjoing particles' energy' based on the response of the detector. 
+  * Does the energy resolution of the cross section library limit what we can tally in the monte carlo.   
+* Garret was looking through the Advantg manual and found an interesting sample problem that might be useful as a starting point for our method. 
+  * Simplified portal monitor
+
+Other things:
+* Garrett could start looking for various shielding benchmark problems that will be improved with angular information (literature review info) 
+* Make new page on github for problems that you find. 
+* Also can improve and add information on the cask model if necessary
+* Also make a page for options that we can alter in Denovo (what Sn options are available? Legendre orders? etc.)
+  * What options to mavric and advantg use? Do they recommend parameters for certain problems or do they default the same for each problem. 
+  * List information on defaults for both monte carlo and denovo transport.   
 
 ### Meeting 2015/06/17
 Attendees:
