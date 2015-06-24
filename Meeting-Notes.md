@@ -14,21 +14,23 @@ Main Notes:
 * Rachel wrote an ANS summary on choosing parameters for FW-CADIS. 
   * She put it in the dropbox group folder. See for review. 
   * Both the abstract and the presentation are in the backrground folder. 
-* Garret was looking into making a source term in scale. 
+* Garret was looking into making a surface source in scale. 
   * MCNP and SCALE are not compatible with source terms. 
-* Fuel source terms are binary files form origin.
+* Fuel source terms are binary files form origen.
   * Need to find out how to get these files to an MCNP-readable format.
-  * Maybe we need to e-mail kaushik to get the input that was put into origin to get these materail sources. 
-* Converting the template to MCNP vs. making a pseudo-volume source
+  * Maybe we need to e-mail kaushik to get the input that was put into origin to get these material sources. 
+* **Discussion** Converting the template to MCNP vs. making a pseudo-volume source:
   * Converting the template to MCNP would take time
-    * Maybe it is possible to change the sub-templates to an MCNP format. 
-    * Not all of the same fuel assemblies are in the cask, so changing to MCNP would involve changing all of those sub templates. 
-    * Maybe we could use the same assembly repeated 24 times instead of 24 different assemblies. 
-    * Garrett could parse the scale file with regex and manually put it into an MCNP input. 
+    * Maybe it is possible to change the sub-templates to an MCNP format? 
+    * Not all of the same fuel assemblies are in the cask, so changing to MCNP would involve changing all of those sub templates? 
+    * Maybe we could use the same assembly repeated 24 times instead of 24 different assemblies?
+    * Garrett could parse the scale file with regex to copy over numbers and dimensions and then manually construct the MCNP deck aroudn that. 
       * this is probably the path of least resistance. 
-  * The psuedo volume source could be a tally from scale, then put taht tally information into a simpler geometry MCNP file.
+  * The psuedo volume source could be a tally from scale, then put that tally information into a simpler geometry MCNP file.
     * The tally in scale could either be before the overpack and before the cansiter.   
-
+* **Decision** Garrett will parse the scale file with regular expressions to get numbers and dimensions of the canister. Then the mcnp deck will be built manually around that. 
+   * 1. The fuel source term can be converted to a MCNP format with monteburns somehow. 
+   * 2. Or we could e-mail kaushik to get the original input for origin and put it into an MCNP format directly -- is this possible with origin?  
 ### Meeting 2015/06/22
 Attendees: 
 * Garrett, Madicken
