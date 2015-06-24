@@ -1,9 +1,33 @@
 ### Meeting List
+* [Meeting: 2015/06/23](#meeting-20150623)
 * [Meeting: 2015/06/22](#meeting-20150622)
 * [Meeting: 2015/06/15](#meeting-20150615)
 * [Meeting: 2015/06/17](#meeting-20150617)
 
 ***
+### Meeting 2015/06/23
+Attendees: Rachel, Garrett, Madicken
+
+Main Notes:
+* Got an e-mail back from kaushik; he wants garrett to model the rebar.
+* We want to do continuous energy monte carlo in hybrid calculations. 
+* Rachel wrote an ANS summary on choosing parameters for FW-CADIS. 
+  * She put it in the dropbox group folder. See for review. 
+  * Both the abstract and the presentation are in the backrground folder. 
+* Garret was looking into making a source term in scale. 
+  * MCNP and SCALE are not compatible with source terms. 
+* Fuel source terms are binary files form origin.
+  * Need to find out how to get these files to an MCNP-readable format.
+  * Maybe we need to e-mail kaushik to get the input that was put into origin to get these materail sources. 
+* Converting the template to MCNP vs. making a pseudo-volume source
+  * Converting the template to MCNP would take time
+    * Maybe it is possible to change the sub-templates to an MCNP format. 
+    * Not all of the same fuel assemblies are in the cask, so changing to MCNP would involve changing all of those sub templates. 
+    * Maybe we could use the same assembly repeated 24 times instead of 24 different assemblies. 
+    * Garrett could parse the scale file with regex and manually put it into an MCNP input. 
+      * this is probably the path of least resistance. 
+  * The psuedo volume source could be a tally from scale, then put taht tally information into a simpler geometry MCNP file.
+    * The tally in scale could either be before the overpack and before the cansiter.   
 
 ### Meeting 2015/06/22
 Attendees: 
