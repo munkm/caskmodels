@@ -1,8 +1,8 @@
 ### Meeting List
 * [Meeting: 2015/06/23](#meeting-20150623)
 * [Meeting: 2015/06/22](#meeting-20150622)
-* [Meeting: 2015/06/15](#meeting-20150615)
 * [Meeting: 2015/06/17](#meeting-20150617)
+* [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
 ### Meeting 2015/06/23
@@ -35,18 +35,18 @@ Attendees:
 * Refer to Weekly Updates 2015/06/19 for what these notes respond to. 
 
 Main Notes:
-* Garret described issues of compatibility for an RSSA file for the surface source.
+* Garrett described issues of compatibility for an RSSA file for the surface source.
   * To do:
-    * Find out if scale can produce an RSSA file that is compatibile with MCNP
+    * Find out if scale can produce an RSSA file that is compatible with MCNP
     * Can the RSSA file from scale be used for an MCNP surface source?
 * Recursive point testing
-  * Uses smaller and smaller blocks until each block contains only one material (up to some threshold value). It is a way of defining a geometry. 
+  * Uses smaller and smaller blocks until each block contains only one material (up to some threshold value). It is a way of defining a (homogenized) macro-material when generating Denovo discretized input 
 * Find out how Advantg and mavric use Denovo. What are their default parameters?
-* We will probably start with a cylindrical mesh tally for the cask models, but we will likely test both cylindrical and rectangular meshes for the caracterization of the method itself.
+* We will probably start with a cylindrical mesh tally for the cask models, but we will likely test both cylindrical and rectangular meshes for the characterization of the method itself.
 * Depending on the size of the MG library that you use for the forward calculation, that will influence how it bins the particles by energy group while you're tallying. 
-  * When you're running mavric and doing the adjoint transport. When it creates the adjoint source it generates the 'adjoing particles' energy' based on the response of the detector. 
+  * Adjoint source particles 'energy' usually described by the detector response function.
   * Does the energy resolution of the cross section library limit what we can tally in the monte carlo.   
-* Garret was looking through the Advantg manual and found an interesting sample problem that might be useful as a starting point for our method. 
+* Garrett was looking through the Advantg manual and found an interesting sample problem that might be useful as a starting point for our method. 
   * Simplified portal monitor
 
 Other things:

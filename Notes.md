@@ -4,8 +4,6 @@
 ### Dry Cask Images
 * Any images of the dry cask storage is fine to put on the public site. They have been changed according to public documents (see below). Any images of the transportation cask and modifications before the final dry cask are on the [private repo](https://github.com/munkm/caskmodels_private/blob/master/Notes.md)
 
-***
-
 ### VCC (Dry Cask) SARs
 The following are all various different versions and excerpts of the Safety Analysis Report (SAR) for the NAC International UMS Universal Storage System.
 These documents were all retrieved from the [NRC ADAMS](http://www.nrc.gov/reading-rm/adams.html) system. Documents are named by their corresponding NRC accession number;
