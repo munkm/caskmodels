@@ -1,9 +1,26 @@
 ### Update List
-* [Update: 2015/06/12](#update-20150612)
+* [Update: 2015/06/26](#update-20150626)
 * [Update: 2015/06/19](#update-20150619)
+* [Update: 2015/06/12](#update-20150612)
 * [Sample Update: 2000/01/01](#update: 2000/01/01)
 
 ***
+
+### Update: 2015/06/23
+**This Weeks Progress**
+* Added all vertical rebar structures to concrete overpack.
+* Figured out how to plot cask geometry by running scale and using built-in plot card. I had to learn how to do this due to Fulcrum (geometry viewer for SCALE inputs) not being able to process a ring structure (feature not yet supported in beta version).
+
+**Questions**
+* Pick which assembly we want to use to replace all other assemblies in the models (The One Assembly). One with high enrichment and burnup?
+
+**Goals for Next Week**
+* Have all cask rebar structures modeled.
+* Make new sub-template for VCC dry overpack with all rebar structures. I am planning to make this in addition to the subtemplate I already made. This way you could choose if you wanted to use the cask model with or without rebar.
+* Start researching parallels between SCALE and MCNP geometry, specifically arrays and universes for converting the input.
+* Research regex (planning to use python), generate script to help SCALE to MCNP conversion
+
+
 
 ### Update: 2015/06/19
 **This Weeks Progress**
