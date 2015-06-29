@@ -1,10 +1,36 @@
 ### Meeting List
+* [Meeting: 2015/06/29](#meeting-20150629)
 * [Meeting: 2015/06/23](#meeting-20150623)
 * [Meeting: 2015/06/22](#meeting-20150622)
 * [Meeting: 2015/06/17](#meeting-20150617)
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+
+### Meeting 2015/06/29
+Attendees: Garrett, Madicken
+Main Notes:
+* Garrett added rebar to the cask
+  * The dry cask can be described and put on the public repo
+  * Data for the dry cask was taken from publicly available documents, so a plotted geometry of that information should not be subject to export control restrictions. 
+* All of the vertical rebar has been added
+  * Still need to add axial rings of rebar
+    * Fulcrum doesn't have the ability to plot ring geometry, so rendering the geometry for rings had some issues. 
+
+Questions:
+* Which assembly do we want to use?
+  * Maybe the one with the highest burnup
+    * High burnup has more interesting n-capture radioisotopes
+  * Shorter cooling time
+    * Less time for short-ish-length radioisotopes to decay away
+
+Other things:
+* Garrett plans to have all cask rebar structures modelled this week. 
+  * We'd like to give the model back to ORNL when this is finished.
+    * We should test that the model doesn't have transport or geometry errors. We can't run the model on garrett's local machine because the source files and the setup for the input are strucutred to run on a UNIX-like system. 
+       * Probably need to wait to give model to ONRL until testing is done
+  * ACTION: Get stuff installed on savio so we can run the problem. 
+
 ### Meeting 2015/06/23
 Attendees: Rachel, Garrett, Madicken
 
