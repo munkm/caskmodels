@@ -1,0 +1,77 @@
+unit 10305
+  com='assembly_id:"EF0085" reactor_id:2801.0 %fuel pin  in assembly type C1414C: location 3 node 5'
+  cuboid   1 0.736600 -0.736600 0.736600 -0.736600   19.290000  0.
+  cylinder 2 0.478155   19.290000  0.
+  cylinder 3 0.487680   19.290000  0.
+  cylinder 4 0.558800   19.290000  0.
+  media    1041     1     2
+  media       9     1     3    -2
+  media      13     1     4    -3
+  media       9     1     1    -4
+  boundary    1
+unit 10306
+  com='assembly_id:"EF0085" reactor_id:2801.0 %fuel pin  in assembly type C1414C: location 3 node 6'
+  cuboid   1 0.736600 -0.736600 0.736600 -0.736600   19.290000  0.
+  cylinder 2 0.478155   19.290000  0.
+  cylinder 3 0.487680   19.290000  0.
+  cylinder 4 0.558800   19.290000  0.
+  media    1042     1     2
+  media       9     1     3    -2
+  media      13     1     4    -3
+  media       9     1     1    -4
+  boundary    1
+unit 10307
+  com='assembly_id:"EF0085" reactor_id:2801.0 %fuel pin  in assembly type C1414C: location 3 node 7'
+  cuboid   1 0.736600 -0.736600 0.736600 -0.736600   19.290000  0.
+  cylinder 2 0.478155   19.290000  0.
+  cylinder 3 0.487680   19.290000  0.
+  cylinder 4 0.558800   19.290000  0.
+  media    1043     1     2
+  media       9     1     3    -2
+  media      13     1     4    -3
+  media       9     1     1    -4
+  boundary    1
+unit 10308
+  com='assembly_id:"EF0085" reactor_id:2801.0 %fuel pin  in assembly type C1414C: location 3 node 8'
+  cuboid   1 0.736600 -0.736600 0.736600 -0.736600   19.290000  0.
+  cylinder 2 0.478155   19.290000  0.
+  cylinder 3 0.487680   19.290000  0.
+  cylinder 4 0.558800   19.290000  0.
+  media    1044     1     2
+  media       9     1     3    -2
+  media      13     1     4    -3
+  media       9     1     1    -4
+  boundary    1
+unit 10309
+  com='assembly_id:"EF0085" reactor_id:2801.0 %fuel pin  in assembly type C1414C: location 3 node 9'
+  cuboid   1 0.736600 -0.736600 0.736600 -0.736600   19.290000  0.
+  cylinder 2 0.478155   19.290000  0.
+  cylinder 3 0.487680   19.290000  0.
+  cylinder 4 0.558800   19.290000  0.
+  media    1045     1     2
+  media       9     1     3    -2
+  media      13     1     4    -3
+  media       9     1     1    -4
+  boundary    1
+unit 10310
+  com='assembly_id:"EF0085" reactor_id:2801.0 %fuel pin  in assembly type C1414C: location 3 node 10'
+  cuboid   1 0.736600 -0.736600 0.736600 -0.736600   19.290000  0.
+  cylinder 2 0.478155   19.290000  0.
+  cylinder 3 0.487680   19.290000  0.
+  cylinder 4 0.558800   19.290000  0.
+  media    1046     1     2
+  media       9     1     3    -2
+  media      13     1     4    -3
+  media       9     1     1    -4
+  boundary    1
+unit 10311
+  com='assembly_id:"EF0085" reactor_id:2801.0 %fuel pin  in assembly type C1414C: location 3 node 11'
+  cuboid   1 0.736600 -0.736600 0.736600 -0.736600   19.290000  0.
+  cylinder 2 0.478155   19.290000  0.
+  cylinder 3 0.487680   19.290000  0.
+  cylinder 4 0.558800   19.290000  0.
+  media    1047     1     2
+  media       9     1     3    -2
+  media      13     1     4    -3
+  media       9     1     1    -4
+  boundary    1
