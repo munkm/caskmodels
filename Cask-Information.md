@@ -10,7 +10,7 @@ by the SCALE input. All source terms are decayed to May 6th, 2015.
 
 ***
 
-### Storage Cask
+### VCC Dry Storage Cask
 * The original transfer cask input was modified to create a dry storage cask input. The dry storage cask modeled is the NAC International UMS Universal Storage System Vertical Concrete Cask (VCC).
 This dry cask was chosen because it is compatible with the TSC-1 cannister and is part of the same fuel storage system by NAC International. The VCC is typically used for dry storage of spent fuel in ISFSIs.
 * The information used to model the VCC was obtained from Safety Analysis Reports (SAR) submitted by the manufacturer to the NRC. These were found using the NRC ADAMS system. More information can be found 
@@ -32,7 +32,8 @@ the only modification required was to create a new sub-template for the VCC over
  the same as the original transfer cask model.
 
 **Main Features of the VCC Cask**
-* The VCC overpack is primarily made of concrete 28 inches thick, with an inner steel liner 2.5 inches thick. 
+* The VCC overpack is primarily made of concrete 28 inches thick, with an inner steel liner 2.5 inches thick.
+* Inside the concrete are rebar structures. These include vertical rods which run the axial length of the cask on the inner and outer radii. There are also rebar rings which run axially up the cask. There are smaller diameter rings towards the inside and larger diameter rings towards the outside.
 * At the bottom of the cask is a steel structure called the base weldment. This acts as both a support for the cannister
  and a structure that directs air from the air inlets. 4 air inlets are connected to the base weldment and protrude through the concrete overpack to pass air from outside to inside the cask, to pass upwards through the annulus of air
  formed between the cannister and the cask. 
@@ -40,6 +41,7 @@ the only modification required was to create a new sub-template for the VCC over
  air to pass from inside the cask to the outside, while minimizing radiation streaming.
 * The top of the cask has a 2 inch thick steel lid. Sitting in the space beneath the lid and above the TSC-1 cannister is the shield plug. This is a 5 inch thick
  cylindrical plug made of carbon steel and neutron absorbing material. The shield plug sits on top of a support ring on the inner diameter of the steel liner, just above the TSC-1 cannister top.
+
  
 **Changes to Material Composition Sub-template**
 * All cask material compositions are supplied by the "UMS-24-CaskMaterials.tmpl" sub-template. The only material compositions that were missing from this file needed to make the VCC cask were carbon steel and concrete.
