@@ -35,12 +35,12 @@ def convertCylinder(entry, uni):
         x = 0.0
     if re.search(r'y=\S+', entry.lower()):
         y = re.search(r'y=\S+', entry.lower())
-        y = float(x.group()[2:])
+        y = float(y.group()[2:])
     else:
         y = 0.0
     if re.search(r'z=\S+', entry.lower()):
         z = re.search(r'z=\S+', entry.lower())
-        z = float(x.group()[2:])
+        z = float(z.group()[2:])
     else:
         z = 0.0
     Hx = 0.0
