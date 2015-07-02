@@ -1,4 +1,5 @@
 ### Meeting List
+* [Meeting: 2015/06/30](#meeting-20150630)
 * [Meeting: 2015/06/29](#meeting-20150629)
 * [Meeting: 2015/06/23](#meeting-20150623)
 * [Meeting: 2015/06/22](#meeting-20150622)
@@ -6,6 +7,22 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+### Meeting 2015/06/30
+Attendees: Rachel, Garrett, Madicken
+
+Main Notes:
+* Garrett showed Rachel the progress he made on adding rebar to the cask model.
+  * As of today, he thinks he is finished with adding the rebar
+  * He is going to make a subtemplate to turn on and off the rebar in the cask model
+* Cask model subnotes:
+  * The rebar structure is plotted in regular scale. Fulcrum has issues with plotting ring structures. When we send the model back to ORNL that will be an important thing to note. 
+  * We'd also like to test transport on the model before we send it back to ORNL. Right now the model is pretty much finished (as we know it), but we need to install software on savio to make sure that there aren't issues when we run it in scale. 
+* Garrett also summarized his goals for the week
+* Which assembly to use? 
+  * Look at the one with the highest neutron emission rate
+  * And the one with the highest photon emission rate
+
+
 
 ### Meeting 2015/06/29
 Attendees: Garrett, Madicken
