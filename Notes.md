@@ -5,19 +5,19 @@
 * Any images of the dry cask storage are fine to put on the public site. They have been changed according to public documents (see below). Any images of the transportation cask and modifications before the final dry cask are on the [private repo](https://github.com/munkm/caskmodels_private/blob/master/Notes.md)
 * This is a view of a vertical slice of the VCC dry cask modified according to the changes described in [Cask Information](./Cask-Information.md). Here you can see the entire cask. Seen in the concrete overpack are the cross-sections of the axial rebar rings as well as 2 of the vertical rebars. Seen at the top of the cask is the shield plug and cask lid. At the bottom of the cask a slice through the weldment structure is seen, along with 2 of the air inlets which protrude from the base weldment to the outside of the cask. 
 ![image_1]
-(http://munkm.github.io/caskmodels/blob/gh-pages/Images/VCC_center_side_profile.png)
+(http://munkm.github.io/caskmodels/Images/VCC_center_side_profile.png)
 * This is a view of a vertical slice of the VCC dry cask off center. This image provides a view of the air outlets at the top of the cask and their labyrinth structure. Again seen in the concrete overpack are the cross-sections of the axial rebar rings as well as some of the vertical rebars.
 ![image_2]
-(http://munkm.github.io/caskmodels/blob/gh-pages/Images/VCC_side_profile.png)
+(http://munkm.github.io/caskmodels/Images/VCC_side_profile.png)
 * This is a view of the cross-section through the middle of the cask.
 ![image_3]
-(http://munkm.github.io/caskmodels/blob/gh-pages/Images/VCC_cross_section.png)
+(http://munkm.github.io/caskmodels/Images/VCC_cross_section.png)
 * This is a view of the cross-section of the base weldment structure at the bottom of the cask. This image shows the geometry of the four air inlets. The ring at the center is the baffle that directs air upwards into the cask.
 ![image_4]
-(http://munkm.github.io/caskmodels/blob/gh-pages/Images/VCC_base_weldment.png)
+(http://munkm.github.io/caskmodels/Images/VCC_base_weldment.png)
 * This is a view of the cross-section of the base weldment structure above the level of the air inlets. This image shows the openings in the base weldment that allow the air coming in from the air inlets to enter the upwards air cavity between the outside of the canister and the inside of the concrete cask.
 ![image_5]
-(http://munkm.github.io/caskmodels/blob/gh-pages/Images/VCC_base_weldment_2.png)
+(http://munkm.github.io/caskmodels/Images/VCC_base_weldment_2.png)
 
 ### VCC (Dry Cask) SARs
 The following are all various different versions and excerpts of the Safety Analysis Report (SAR) for the NAC International UMS Universal Storage System.
