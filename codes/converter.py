@@ -60,6 +60,20 @@ def convertCylinder(entry, uni):
         newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(label, str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
     return newEntry
     
+def convertCuboid(entry, uni):
+    comps = entry.split()
+    label = comps[1]
+    xmax = comps[2]
+    xmin = comps[3]
+    ymax = comps[4]
+    ymin = comps[5]
+    zmax = comps[6]
+    zmin = comps[7]
+    if uni != '0':
+        newEntry = '{} RPP {} {} {} {} {} {} u={}\n'.format(label, xmax, xmin, ymax, ymin, zmax, zmin, uni)
+    else:
+        newEntry = '{} RPP {} {} {} {} {} {}\n'.format(label, xmax, xmin, ymax, ymin, zmax, zmin)
+    return newEntry
     
 def main():
     if len(sys.argv) != 2:
@@ -97,6 +111,9 @@ def main():
             newInput += newEntry
         elif Find('cylinder', line) == True:
             newEntry = convertCylinder(line, uni)
+            newInput += newEntry
+        elif Find('cuboid', line) == True:
+            newEntry = convertCuboid(line, uni)
             newInput += newEntry
             
     inputWriter('newInput.txt', newInput)
