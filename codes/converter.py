@@ -30,7 +30,7 @@ def Find(pat, text):
         bool = False
     return bool
     
-def convertCylinder(entry, uni):
+def convertCylinder(entry):
     comps = entry.split()
     label = comps[1]
     r = comps[2]
@@ -54,13 +54,10 @@ def convertCylinder(entry, uni):
     Hx = 0.0
     Hy = 0.0
     Hz = abs(zTop) + abs(zBot)
-    if uni != '0':
-        newEntry = '{} RCC {} {} {} {} {} {} {} u={}\n'.format(label, str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r, uni)
-    else:
-        newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(label, str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
+    newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(label, str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
     return newEntry
     
-def convertCuboid(entry, uni):
+def convertCuboid(entry):
     comps = entry.split()
     label = comps[1]
     xmax = comps[2]
@@ -69,10 +66,7 @@ def convertCuboid(entry, uni):
     ymin = comps[5]
     zmax = comps[6]
     zmin = comps[7]
-    if uni != '0':
-        newEntry = '{} RPP {} {} {} {} {} {} u={}\n'.format(label, xmax, xmin, ymax, ymin, zmax, zmin, uni)
-    else:
-        newEntry = '{} RPP {} {} {} {} {} {}\n'.format(label, xmax, xmin, ymax, ymin, zmax, zmin)
+    newEntry = '{} RPP {} {} {} {} {} {}\n'.format(label, xmax, xmin, ymax, ymin, zmax, zmin)
     return newEntry
     
 def main():
@@ -110,10 +104,10 @@ def main():
             newEntry = 'c {}'.format(line[1:])
             newInput += newEntry
         elif Find('cylinder', line) == True:
-            newEntry = convertCylinder(line, uni)
+            newEntry = convertCylinder(line)
             newInput += newEntry
         elif Find('cuboid', line) == True:
-            newEntry = convertCuboid(line, uni)
+            newEntry = convertCuboid(line)
             newInput += newEntry
             
     inputWriter('newInput.txt', newInput)
