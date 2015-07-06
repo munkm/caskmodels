@@ -22,6 +22,14 @@ def inputWriter(fileName, LineList):
     f.writelines(LineList)
     f.close()
     
+def Find(pat, text):
+    match = re.search(pat, text)
+    if match:
+        bool = True
+    else:
+        bool = False
+    return bool
+    
 def convertCylinder(entry, uni):
     comps = entry.split()
     label = comps[1]
@@ -52,6 +60,7 @@ def convertCylinder(entry, uni):
         newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(label, str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
     return newEntry
     
+    
 def main():
     if len(sys.argv) != 2:
         print 'Missing Input Arguments \n', 'usage: python converter.py SCALE_input_file'
@@ -74,8 +83,19 @@ def main():
         print line,
         
     for line in lines:
-        match = re.search('cylinder', line)
-        if match:
+        if Find('unit',line) == True:
+            match = re.search(r'unit \d+', line)
+            uni = match.group()[5:]
+        elif Find('boundary', line) == True:
+            uni =  '0'
+        elif Find('com=', line) == True:
+            match = re.search(r'com=[\S\s]+', line)
+            newEntry = 'c {}'.format(match.group()[4:])
+            newInput += newEntry
+        elif line[0] == '\'':
+            newEntry = 'c {}'.format(line[1:])
+            newInput += newEntry
+        elif Find('cylinder', line) == True:
             newEntry = convertCylinder(line, uni)
             newInput += newEntry
             
