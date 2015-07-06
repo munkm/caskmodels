@@ -1,4 +1,5 @@
 ### Update List
+* [Update: 2015/07/06](#update-20150706)
 * [Update: 2015/06/26](#update-20150626)
 * [Update: 2015/06/19](#update-20150619)
 * [Update: 2015/06/12](#update-20150612)
@@ -6,7 +7,20 @@
 
 ***
 
-### Update: 2015/06/23
+### Update: 2015/06/26
+**This Weeks Progress**
+* Added all rebar structures to SCALE VCC model.
+* Created subtemplate for VCC model with rebar.
+* Researched parallels between SCALE and MCNP inputs.
+* Started developing a python script for SCALE to MCNP conversion.
+* Added dry cask images to public repo and added rebar structures description to the Cask-Information page.
+
+**Plan for this Week:**
+* Continue developing SCALE to MCNP conversion script.
+* Start making MCNP input.
+
+
+### Update: 2015/06/26
 **This Weeks Progress**
 * Added all vertical rebar structures to concrete overpack.
 * Figured out how to plot cask geometry by running scale and using built-in plot card. I had to learn how to do this due to Fulcrum (geometry viewer for SCALE inputs) not being able to process a ring structure (feature not yet supported in beta version).
