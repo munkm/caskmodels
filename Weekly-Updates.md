@@ -7,7 +7,7 @@
 
 ***
 
-### Update: 2015/06/26
+### Update: 2015/07/06
 **This Weeks Progress**
 * Added all rebar structures to SCALE VCC model.
 * Created subtemplate for VCC model with rebar.
