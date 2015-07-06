@@ -30,12 +30,15 @@ def Find(pat, text):
         bool = False
     return bool
     
-def convertCylinder(entry):
+def convertCylinder(entry, cellMod):
     comps = entry.split()
     label = comps[1]
     r = comps[2]
     zTop = float(comps[3])
     zBot = float(comps[4])
+    
+    label = int(label) + cellMod
+    
     if re.search(r'x=\S+', entry.lower()):
         x = re.search(r'x=\S+', entry.lower())
         x = float(x.group()[2:])
@@ -54,22 +57,38 @@ def convertCylinder(entry):
     Hx = 0.0
     Hy = 0.0
     Hz = abs(zTop) + abs(zBot)
-    newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(label, str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
+    
+    if Find('a1=', entry) == True:
+        theta = re.search('a1=\S+', entry.lower())
+        theta = int(theta.group()[3:])
+        h1 = theta
+        h2 = 90-theta
+        h3 = 90
+        h4 = 90 + theta
+        h5 = theta
+        h6 = 90
+        newEntry = '{} RCC {} {} {} {} {} {} {} *trcl=(3J {} {} {} {} {} {})\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r, h1, h2, h3, h4, h5, h6)
+    else:
+        newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
     return newEntry
     
-def convertCuboid(entry):
+def convertCuboid(entry,cellMod):
     comps = entry.split()
     label = comps[1]
+    
+    label = int(label) + cellMod
+    
     xmax = comps[2]
     xmin = comps[3]
     ymax = comps[4]
     ymin = comps[5]
     zmax = comps[6]
     zmin = comps[7]
-    newEntry = '{} RPP {} {} {} {} {} {}\n'.format(label, xmax, xmin, ymax, ymin, zmax, zmin)
+    
+    newEntry = '{} RPP {} {} {} {} {} {}\n'.format(str(label), xmax, xmin, ymax, ymin, zmax, zmin)
     return newEntry
     
-def makeCell(entry, cellNum, matdict, uni):
+def makeCell(entry, cellNum, cellMod, matdict, uni):
     comps = entry.split()
     mat = comps[1]
     defs = comps[3:]
@@ -78,7 +97,10 @@ def makeCell(entry, cellNum, matdict, uni):
     
     for i in defs:
         i = float(i)
-        i = i*-1
+        if i > 0:
+            i = (i + cellMod)*-1
+        else:
+            i = i*-1 + cellMod
         i = str(i)[:-2]
         newEntry = newEntry + ' ' + i
     if uni != '0':
@@ -129,13 +151,13 @@ def main():
             newSurfaceInput += newEntry
             newCellInput += newEntry
         elif Find('cylinder', line) == True:
-            newEntry = convertCylinder(line)
+            newEntry = convertCylinder(line, cellMod)
             newSurfaceInput += newEntry
         elif Find('cuboid', line) == True:
-            newEntry = convertCuboid(line)
+            newEntry = convertCuboid(line, cellMod)
             newSurfaceInput += newEntry
         elif Find('media', line) == True:
-            newEntry = makeCell(line, cellNum, d, uni)
+            newEntry = makeCell(line, cellNum, cellMod, d, uni)
             newCellInput += newEntry
             cellNum += 1
             
