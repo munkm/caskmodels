@@ -69,6 +69,26 @@ def convertCuboid(entry):
     newEntry = '{} RPP {} {} {} {} {} {}\n'.format(label, xmax, xmin, ymax, ymin, zmax, zmin)
     return newEntry
     
+def makeCell(entry, cellNum, matdict, uni):
+    comps = entry.split()
+    mat = comps[1]
+    defs = comps[3:]
+    
+    newEntry = '{} {} {}'.format(cellNum, mat, str(matdict[mat]))
+    
+    for i in defs:
+        i = float(i)
+        i = i*-1
+        i = str(i)[:-2]
+        newEntry = newEntry + ' ' + i
+    if uni != '0':
+        newEntry += ' u={}\n'.format(uni)
+    else:
+        newEntry += '\n'
+    return newEntry
+        
+
+
 def main():
     if len(sys.argv) != 2:
         print 'Missing Input Arguments \n', 'usage: python converter.py SCALE_input_file'
@@ -77,9 +97,12 @@ def main():
     scaleInputPath = sys.argv[1]
     startLine = int(raw_input("Line in SCALE input to start convsersion?\n"))
     endLine = int(raw_input("Line in SCALE input to stop convserion?\n"))
+    cellNum = int(raw_input("What cell number to start from?\n"))
     cellMod = int(raw_input("Increase MCNP surface id's by what amount? (zero for no adjustment)\n"))
     uni = '0'
-    newInput = []
+    newSurfaceInput = []
+    newCellInput = []
+    d = {'1': -7.94, '2':-2.702, '3': 0.1001, '5':-0.0012, '9':-0.0012, '300':0.1169, '304':0.0852, '305':0.033, '306':0.0874, '307':-2.3, '19':-6.56, '109':-6.56, '1145':-9.997, '1146':-9.997, '1147':-9.997, '1148':-9.997, '1149':-9.997, '1150':-9.997, '1151':-9.997, '1152':-9.997, '1153':-9.997, '1154':-9.997, '1155':-9.997, '1156':-9.997, '1157':-9.997, '1158':-9.997, '1159':-9.997, '1160':-9.997, '1161':-9.997, '1162':-9.997, '409':-1.48, '509':-0.71, '609':-0.86, '709':-0.7}
     
     print scaleInputPath
     print startLine
@@ -99,18 +122,25 @@ def main():
         elif Find('com=', line) == True:
             match = re.search(r'com=[\S\s]+', line)
             newEntry = 'c {}'.format(match.group()[4:])
-            newInput += newEntry
+            newSurfaceInput += newEntry
+            newCellInput += newEntry
         elif line[0] == '\'':
             newEntry = 'c {}'.format(line[1:])
-            newInput += newEntry
+            newSurfaceInput += newEntry
+            newCellInput += newEntry
         elif Find('cylinder', line) == True:
             newEntry = convertCylinder(line)
-            newInput += newEntry
+            newSurfaceInput += newEntry
         elif Find('cuboid', line) == True:
             newEntry = convertCuboid(line)
-            newInput += newEntry
+            newSurfaceInput += newEntry
+        elif Find('media', line) == True:
+            newEntry = makeCell(line, cellNum, d, uni)
+            newCellInput += newEntry
+            cellNum += 1
             
-    inputWriter('newInput.txt', newInput)
+    inputWriter('MCNP_Surface_Input.txt', newSurfaceInput)
+    inputWriter('MCNP_Cell_Input.txt', newCellInput)
     
 if __name__ == '__main__':
     main()
