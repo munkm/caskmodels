@@ -3,7 +3,12 @@
 Created on Wed Jul 01 16:19:21 2015
 @author: Garrett Baltz
 
-This is a script designed to aid in the conversion of a SCALE input to an MCNP input.
+This is a script designed to aid in the conversion of a SCALE input to an MCNP input. This script is to only be used for geometry conversion, and currently only converts special cases of cuboids, cylinders, and ycylinders.
+
+The input argument line takes the path of the SCALE input file to convert. The script will then prompt the user to enter the start line and end line to specify what section of the input to convert. The script will also ask at what number to start labeling the MCNP cells, as there is no corollary in SCALE. The script will finally ask if you want to add a factor to the labeling of the surfaces to account for the ability to reuse surface labels in SCALE but not in MCNP.
+
+** Warning **
+This script is NOT a comprehensive converter and is currently tailored to convert a specific input.
 
 """
 
@@ -61,7 +66,50 @@ def convertCylinder(entry, cellMod):
     
     if Find('a1=', entry) == True:
         theta = re.search('a1=\S+', entry.lower())
-        theta = int(theta.group()[3:])
+        theta = float(theta.group()[3:])
+        h1 = theta
+        h2 = 90-theta
+        h3 = 90
+        h4 = 90 + theta
+        h5 = theta
+        h6 = 90
+        newEntry = '{} RCC {} {} {} {} {} {} {} *trcl=(3J {} {} {} {} {} {})\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r, h1, h2, h3, h4, h5, h6)
+    else:
+        newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
+    return newEntry
+    
+def convertYCylinder(entry, cellMod):
+    comps = entry.split()
+    label = comps[1]
+    r = comps[2]
+    yTop = float(comps[3])
+    yBot = float(comps[4])
+    
+    label = int(label) + cellMod
+    
+    if re.search(r'x=\S+', entry.lower()):
+        x = re.search(r'x=\S+', entry.lower())
+        x = float(x.group()[2:])
+    else:
+        x = 0.0
+    if re.search(r'y=\S+', entry.lower()):
+        y = re.search(r'y=\S+', entry.lower())
+        y = float(y.group()[2:])
+    else:
+        y = yBot
+    if re.search(r'z=\S+', entry.lower()):
+        z = re.search(r'z=\S+', entry.lower())
+        z = float(z.group()[2:])
+    else:
+        z = 0.0
+        
+    Hx = 0.0
+    Hy = yTop - yBot
+    Hz = 0.0
+    
+    if Find('a1=', entry) == True:
+        theta = re.search('a1=\S+', entry.lower())
+        theta = float(theta.group()[3:])
         h1 = theta
         h2 = 90-theta
         h3 = 90
@@ -160,6 +208,9 @@ def main():
             newEntry = 'c {}'.format(line[1:])
             newSurfaceInput += newEntry
             newCellInput += newEntry
+        elif Find('ycylinder', line) == True:
+            newEntry = convertYCylinder(line, cellMod)
+            newSurfaceInput += newEntry
         elif Find('cylinder', line) == True:
             newEntry = convertCylinder(line, cellMod)
             newSurfaceInput += newEntry

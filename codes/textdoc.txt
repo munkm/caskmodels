@@ -1,45 +1,43 @@
-' lower-inside air passage annulus
- cylinder 411 140.208 239.166 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 9 1 411 -3 -417 -421 -422
-' vertical air passage annulus (ordered outer and inner surfaces)
- cylinder 412 150.114 262.026 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- cylinder 413 140.208 262.026 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 9 1 412 -413 -417 -418 -419 -423 -424
- media 307 1 413 -2 -411 -415 -1201 -1204
-' outer-upper air passage annulus
- cylinder 414 172.72 262.026 252.12 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 9 1 414 -412 -418 -419 -420 -425 -426
-' top shield
- cylinder 415 140.208 244.246 239.166 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 306 1 415 -2
-' vertical shield
- cylinder 416 155.194 252.12 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 306 1 416 -412 
-' Bottom plate
- cylinder 417 150.114 230.2125 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 306 1 417 -2
- media 306 1 417 2 -3
-' vertical plate
- cylinder 418 141.1605 262.026 239.166 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 306 1 418 -413 -423 -424
-' outer top plate
- cylinder 419 172.72 262.026 261.0735 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 306 1 419 -418
-' outer bottom plate
- cylinder 420 172.72 253.0725 252.12 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
- media 306 1 420 -412
-' lower side plates
- cuboid 421 -54.2925 -53.34 142 60 239.166 230.2125 rotate a1=225
- cuboid 422 54.2925 53.34 142 60 239.166 230.2125 rotate a1=225
- media 306 1 421 411 -3
- media 306 1 422 411 -3
-' vertical passage side plates
- cuboid 423 -54.2925 -53.34 155 110 261.0735 230.2125 rotate a1=225
- cuboid 424 54.2925 53.34 155 110 261.0735 230.2125 rotate a1=225
- media 306 1 423 412 -413
- media 306 1 424 412 -413
-' outer-top side plates
- cuboid 425 -54.2925 -53.34 174 140 261.0735 253.0725 rotate a1=225
- cuboid 426 54.2925 53.34 174 140 261.0735 253.0725 rotate a1=225
- media 306 1 425 1 -412
- media 306 1 426 1 -412
+' #1 structures
+' clockwise order
+' ignoring bottom hook
+ cylinder 1100 0.9525 237.642 -247.498 origin X=-27.77 Y=107.37
+ ycylinder 1101 0.9525 143.92 110.9 origin Z=236.6895 rotate a1=14.5
+ media 306 1 1100
+ media 306 1 1101 -1100
+ cylinder 1102 0.9525 237.642 -247.498 origin X=-107.37 Y=27.77
+ ycylinder 1103 0.9525 143.92 110.9 origin Z=236.6895 rotate a1=75.5
+ media 306 1 1102
+ media 306 1 1103 -1102
+ cylinder 1104 0.9525 237.642 -247.498 origin X=-107.37 Y=-27.77
+ ycylinder 1105 0.9525 143.92 110.9 origin Z=236.6895 rotate a1=104.5
+ media 306 1 1104
+ media 306 1 1105 -1104
+ cylinder 1106 0.9525 237.642 -247.498 origin X=-27.77 Y=-107.37
+ ycylinder 1107 0.9525 143.92 110.9 origin Z=236.6895 rotate a1=165.5
+ media 306 1 1106
+ media 306 1 1107 -1106
+ cylinder 1108 0.9525 237.642 -247.498 origin X=27.77 Y=-107.37
+ ycylinder 1109 0.9525 143.92 110.9 origin Z=236.6895 rotate a1=194.5
+ media 306 1 1108
+ media 306 1 1109 -1108
+ cylinder 1110 0.9525 237.642 -247.498 origin X=107.37 Y=-27.77
+ ycylinder 1111 0.9525 143.92 110.9 origin Z=236.6895 rotate a1=255.5
+ media 306 1 1110
+ media 306 1 1111 -1110
+ cylinder 1112 0.9525 237.642 -247.498 origin X=107.37 Y=27.77
+ ycylinder 1113 0.9525 143.92 110.9 origin Z=236.6895 rotate a1=284.5
+ media 306 1 1112
+ media 306 1 1113 -1112
+ cylinder 1114 0.9525 237.642 -247.498 origin X=27.77 Y=107.37
+ ycylinder 1115 0.9525 143.92 110.9 origin Z=236.6895 rotate a1=345.5
+ media 306 1 1114
+ media 306 1 1115 -1114
+'
+' #3 structures
+' clockwise order
+' ignoring bottom hook
+ cylinder 1116 0.9525 203.352 -247.498 origin X=-46.87 Y=100.51
+ ycylinder 1117 0.9525 143.92 110.9 origin Z=202.3995 rotate a1=25
+ media 306 1 1116
+ media 306 1 1117 -1116
