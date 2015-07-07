@@ -86,7 +86,18 @@ def convertCuboid(entry,cellMod):
     zmax = comps[6]
     zmin = comps[7]
     
-    newEntry = '{} RPP {} {} {} {} {} {}\n'.format(str(label), xmax, xmin, ymax, ymin, zmax, zmin)
+    if Find('a1=', entry) == True:
+        theta = re.search('a1=\S+', entry.lower())
+        theta = int(theta.group()[3:])
+        h1 = theta
+        h2 = 90-theta
+        h3 = 90
+        h4 = 90 + theta
+        h5 = theta
+        h6 = 90
+        newEntry = '{} RPP {} {} {} {} {} {} *trcl=(3J {} {} {} {} {} {})\n'.format(str(label), xmax, xmin, ymax, ymin, zmax, zmin, h1, h2, h3, h4, h5, h6)
+    else:
+        newEntry = '{} RPP {} {} {} {} {} {}\n'.format(str(label), xmax, xmin, ymax, ymin, zmax, zmin)
     return newEntry
     
 def makeCell(entry, cellNum, cellMod, matdict, uni):

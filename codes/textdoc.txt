@@ -1,86 +1,45 @@
- unit 98999
-  com='Class 1 TSC containing intact fuel'
-' TSC + fuel
-' radial gap (between radial shells of diameters 85.166" and 85.865") 
-' bottom spacer length: 16.75 in. (42.545 cm) (-198.222 to -240.767) - CoC 9270, p. 2
-' ID=65.81 in. -Drawing 582, sh1; inner radius =83.579 cm 
-' OD=67.06 in. -Drawing 582, sh1; outer radius= 85.166 cm
-' total length: 175.05 in. (444.627 cm) - [04] Drawing 790-582, sh1 
-' bottom plate: 1.75 in. (4.445 cm) - [04] Drawing 790-582, sh1
-' top shield lid: 7.0 in. (17.78 cm); ss 304 - [04] Drawing 790-584, sh1
-' top structural lid: 3.0 in. (7.62 cm); ss 304 - [04] Drawing 790-584, sh2
-' internal cavity length: 163.3 in.
-' 
-' -----------------------------------------------------
-' SAR cask model (Class 1 TSC) documented in Ref. [04], Figures 5.3-10 and 5.3-12
-' -----------------------------------------------------
-'
-' outer boundary
- cylinder 1 85.166 246.405 -198.222
-' inner cavity
- cylinder 2 83.579 221.005 -193.777
-' fuel basket; displacement vector z= 5.08
- media 9 1 2
-'
-' active fuel bottom is 4.062" from the canister cavity bottom
-' fuel basket; displacement vector z= 5.08
-'
- hole 97999  origin z=-188.697
-' drain + vent locations (2) in the shield lid (7" thick)
-' drain + vent cover [04] Drawing 790-585, sh 3
-' only the little tube modeled [04] Drawing 790-584, sh 1 & 2  
-' tube OD=1.1"; height=3.3"
- cylinder 3 1.397 8.382 0 origin x=-41.91  y=59.69 z=221.005
- media 9 1 3 
- cylinder 4 1.397 8.382 0 origin x=41.91   y=-59.69 z=221.005
- media 9 1 4
-' TSC 
- media 1 1 1 -2 -3 -4
- boundary  1
-
- global unit 99999
-' NEW
- com='VCC with TSC-1 Inside'
-' ------------------------------------------------------
-' UMS-24 Vertical Concrete Cask (VCC) Overpack Model
-' ------------------------------------------------------
-' Bounding cuboid of air
- cuboid 999 200 -200 200 -200 350 -300 
- media 99 1 999 -1 -4 -9 -101
-'
-' See ML051290397, p. 1.2-26
-' Concrete Overpack outer boundary
-' bottom of bottom plate is  -255.118
-' plate thickness is 1 inch (2.54 cm)
- cylinder 1 172.72 276.25 -252.578
-' inner boundary (outer of steel liner)
- cylinder 2 101.092 276.25 -252.578
-' steel liner inner boundary
- cylinder 3 94.742 276.25 -252.578
-' top flange
- cylinder 4 128.778 276.25 271.17
-' support ring
-' see ML043510070, 790-561 p. 2 of 4, detail B-B
-' chamfered edge ignored
- cylinder 5 94.742 257.2 249.48
- cylinder 6 88.392 257.2 249.48
-' shield plug
-' Dimensions from ML012150409, p. 1.2-23
-' and ML05120403, p. 5.1-2
-' description of geometry from:
-' ML020350016, p. 3.4.1-11
-' ML012150409, p.1.2-15
-' carbon steel container
- cylinder 7 93.98 270.2302 257.2
-' inner NS-4-FR volume
-' same radius as cannister
- cylinder 8 85.166 264.9851 262.4451
-' cask lid
-' Dimensions from ML012150409, p. 1.2-23
- cylinder 9 108.712 280.07 276.25
- media 306 1 5 -6
- media 9 1 6
- media 300 1 8
- media 306 1 7 -8
- media 306 1 4 -2
- media 306 1 9
+' lower-inside air passage annulus
+ cylinder 411 140.208 239.166 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 9 1 411 -3 -417 -421 -422
+' vertical air passage annulus (ordered outer and inner surfaces)
+ cylinder 412 150.114 262.026 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ cylinder 413 140.208 262.026 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 9 1 412 -413 -417 -418 -419 -423 -424
+ media 307 1 413 -2 -411 -415 -1201 -1204
+' outer-upper air passage annulus
+ cylinder 414 172.72 262.026 252.12 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 9 1 414 -412 -418 -419 -420 -425 -426
+' top shield
+ cylinder 415 140.208 244.246 239.166 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 306 1 415 -2
+' vertical shield
+ cylinder 416 155.194 252.12 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 306 1 416 -412 
+' Bottom plate
+ cylinder 417 150.114 230.2125 229.26 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 306 1 417 -2
+ media 306 1 417 2 -3
+' vertical plate
+ cylinder 418 141.1605 262.026 239.166 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 306 1 418 -413 -423 -424
+' outer top plate
+ cylinder 419 172.72 262.026 261.0735 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 306 1 419 -418
+' outer bottom plate
+ cylinder 420 172.72 253.0725 252.12 chord +x=-54.2925 chord -x=54.2925 chord +y=0.0 rotate a1=225
+ media 306 1 420 -412
+' lower side plates
+ cuboid 421 -54.2925 -53.34 142 60 239.166 230.2125 rotate a1=225
+ cuboid 422 54.2925 53.34 142 60 239.166 230.2125 rotate a1=225
+ media 306 1 421 411 -3
+ media 306 1 422 411 -3
+' vertical passage side plates
+ cuboid 423 -54.2925 -53.34 155 110 261.0735 230.2125 rotate a1=225
+ cuboid 424 54.2925 53.34 155 110 261.0735 230.2125 rotate a1=225
+ media 306 1 423 412 -413
+ media 306 1 424 412 -413
+' outer-top side plates
+ cuboid 425 -54.2925 -53.34 174 140 261.0735 253.0725 rotate a1=225
+ cuboid 426 54.2925 53.34 174 140 261.0735 253.0725 rotate a1=225
+ media 306 1 425 1 -412
+ media 306 1 426 1 -412
