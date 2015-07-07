@@ -1,4 +1,5 @@
 ### Meeting List
+* [Meeting: 2015/07/07](#meeting-20150707)
 * [Meeting: 2015/06/30](#meeting-20150630)
 * [Meeting: 2015/06/29](#meeting-20150629)
 * [Meeting: 2015/06/23](#meeting-20150623)
@@ -7,6 +8,28 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+
+### Meeting 2015/07/07
+Attendees: Garrett, Madicken
+
+Main Notes: 
+* Dry cask images are on the notes.md page. 
+  * Added all of the rebar strutures
+  * Added the subtemplate to turn on and off the rebar in the model. 
+    * Action item: test the subtemplate
+* Researched scale to mcnp conversion
+  * If he feels it would be relevant, Garrett might make a markdown page outlining the useful information on the differences between the scale and mcnp decks. 
+* in "codes" folder, garrett has put his converter script for SCALE to MCNP. 
+  * A few things to add: 
+    * Make readme.md document for users that might happen across this script.
+    * Add comments to each function and each "block" of code. 
+    * Build in tests (long term) 
+* Speaking of tests, is there any word on installing software on savio? 
+  * This will be important for testing garret's modified input. 
+* Garrett chose the single fuel assembly that we will repeat through the dry cask strucutre. 
+  * The reasoning for choosing that assembly will be added to the public repo in the Cask_Information.md page 
+  * Garrett needs to use template engine to make new input that only uses this assembly. 
+
 ### Meeting 2015/06/30
 Attendees: Rachel, Garrett, Madicken
 
