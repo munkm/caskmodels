@@ -15,6 +15,7 @@ This script is NOT a comprehensive converter and is currently tailored to conver
 import sys
 import re
 
+# This function opens the SCALE input and imports the lines into memory to be used by other functions
 def importLines(filepath, startLine, endLine):
     f = open(filepath, 'r')
     lines = f.readlines()
@@ -22,11 +23,13 @@ def importLines(filepath, startLine, endLine):
     f.close()
     return lines
     
+# This function is called at the end to create and write the new MCNP input to the two output files
 def inputWriter(fileName, LineList):
     f = open(fileName, 'a')
     f.writelines(LineList)
     f.close()
     
+# This function is a helper to identify if a regular expression exists in a line. Returns true or false.
 def Find(pat, text):
     match = re.search(pat, text)
     if match:
@@ -35,7 +38,11 @@ def Find(pat, text):
         bool = False
     return bool
     
+# This function converters SCALE cylinder objects into MCNP RCC macrobody surfaces.
+# Input: Takes the line containing the SCALE cylinder (entry), and the value to increase the surface id by (cellMod)
+# Returns the final MCNP surace card entry
 def convertCylinder(entry, cellMod):
+    # break the SCALE entry up into its separate parts
     comps = entry.split()
     label = comps[1]
     r = comps[2]
@@ -44,6 +51,7 @@ def convertCylinder(entry, cellMod):
     
     label = int(label) + cellMod
     
+    # Determine if the surface origin is translated and what the coordinates are
     if re.search(r'x=\S+', entry.lower()):
         x = re.search(r'x=\S+', entry.lower())
         x = float(x.group()[2:])
@@ -64,6 +72,7 @@ def convertCylinder(entry, cellMod):
     Hy = 0.0
     Hz = zTop - zBot
     
+    # Determine if the surface is rotated or not and also concatonates the final MCNP card
     if Find('a1=', entry) == True:
         theta = re.search('a1=\S+', entry.lower())
         theta = float(theta.group()[3:])
@@ -78,7 +87,11 @@ def convertCylinder(entry, cellMod):
         newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
     return newEntry
     
+# This function converters SCALE ycylinder objects into MCNP RCC macrobody surfaces.
+# Input: Takes the line containing the SCALE cylinder (entry), and the value to increase the surface id by (cellMod)
+# Returns the final MCNP surace card entry
 def convertYCylinder(entry, cellMod):
+    # break the SCALE entry up into its separate parts
     comps = entry.split()
     label = comps[1]
     r = comps[2]
@@ -121,6 +134,9 @@ def convertYCylinder(entry, cellMod):
         newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
     return newEntry
     
+# This function converters SCALE cuboid objects into MCNP RPP macrobody surfaces.
+# Input: Takes the line containing the SCALE cuboid (entry), and the value to increase the surface id by (cellMod)
+# Returns the final MCNP surace card entry
 def convertCuboid(entry,cellMod):
     comps = entry.split()
     label = comps[1]
@@ -134,6 +150,7 @@ def convertCuboid(entry,cellMod):
     zmax = comps[6]
     zmin = comps[7]
     
+    # Determine if the cuboid is rotated and concatonate the MCNP input
     if Find('a1=', entry) == True:
         theta = re.search('a1=\S+', entry.lower())
         theta = int(theta.group()[3:])
@@ -148,6 +165,9 @@ def convertCuboid(entry,cellMod):
         newEntry = '{} RPP {} {} {} {} {} {}\n'.format(str(label), xmax, xmin, ymax, ymin, zmax, zmin)
     return newEntry
     
+# This function converts SCALE media objects into MCNP cell cards. Also adds the SCALE unit to the MCNP input as a universe entry
+# Input: SCALE media line (entry), what number to start labeling the MCNP cells (cellNum), what factor surfaces are modified by (cellMod), the materials dictionary (matdict), cell's universe (uni)
+# returns the MCNP cell card
 def makeCell(entry, cellNum, cellMod, matdict, uni):
     comps = entry.split()
     mat = comps[1]
@@ -155,6 +175,7 @@ def makeCell(entry, cellNum, cellMod, matdict, uni):
     
     newEntry = '{} {} {}'.format(cellNum, mat, str(matdict[mat]))
     
+    # The conventions for defining cells is opposite in SCALE and MCNP. This fixes the convention and adds the surface label modification factor
     for i in defs:
         i = float(i)
         if i > 0:
@@ -170,31 +191,35 @@ def makeCell(entry, cellNum, cellMod, matdict, uni):
     return newEntry
         
 
-
+# This is the main function called when the script is run
 def main():
     if len(sys.argv) != 2:
         print 'Missing Input Arguments \n', 'usage: python converter.py SCALE_input_file'
         sys.exit(1)
     
     scaleInputPath = sys.argv[1]
+    # Prompt the user for input for required variables
     startLine = int(raw_input("Line in SCALE input to start convsersion?\n"))
     endLine = int(raw_input("Line in SCALE input to stop convserion?\n"))
     cellNum = int(raw_input("What cell number to start from?\n"))
     cellMod = int(raw_input("Increase MCNP surface id's by what amount? (zero for no adjustment)\n"))
     uni = '0'
+    # Initialize the lists containing the converter MCNP input lines to write to output files
     newSurfaceInput = []
     newCellInput = []
+    
+    # This is the material dictionary that must be manually adjusted for each SCALE input
     d = {'1': -7.94, '2':-2.702, '3': 0.1001, '5':-0.0012, '9':-0.0012, '99':-0.0012, '300':0.1169, '304':0.0852, '305':0.033, '306':0.0874, '307':-2.3, '19':-6.56, '109':-6.56, '1145':-9.997, '1146':-9.997, '1147':-9.997, '1148':-9.997, '1149':-9.997, '1150':-9.997, '1151':-9.997, '1152':-9.997, '1153':-9.997, '1154':-9.997, '1155':-9.997, '1156':-9.997, '1157':-9.997, '1158':-9.997, '1159':-9.997, '1160':-9.997, '1161':-9.997, '1162':-9.997, '409':-1.48, '509':-0.71, '609':-0.86, '709':-0.7}
     
-    print scaleInputPath
-    print startLine
-    print endLine
-    print cellMod
+    print '\n\nConverting the SCALE input:', scaleInputPath
 
+    # Inport the desired SCALE input lines to convert
     lines = importLines(scaleInputPath, startLine, endLine)
     for line in lines:
         print line,
-        
+     
+    print '\n\nConverting to MCNP Input...'
+    # This determines what is in each line and then calls the appropriate function to convert the line for MCNP
     for line in lines:
         if Find('unit',line) == True:
             match = re.search(r'unit \d+', line)
@@ -221,9 +246,13 @@ def main():
             newEntry = makeCell(line, cellNum, cellMod, d, uni)
             newCellInput += newEntry
             cellNum += 1
-            
+    
+    print '\n\nFinished Conversion, Writing ouput files...'
+    # Writes the complete MCNP surface and cell inputs to their corresponding output file.       
     inputWriter('MCNP_Surface_Input.txt', newSurfaceInput)
     inputWriter('MCNP_Cell_Input.txt', newCellInput)
+    
+    print 'Conversion complete.'
     
 if __name__ == '__main__':
     main()
