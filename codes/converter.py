@@ -160,9 +160,9 @@ def convertCuboid(entry,cellMod):
         h4 = 90 + theta
         h5 = theta
         h6 = 90
-        newEntry = '{} RPP {} {} {} {} {} {} *trcl=(3J {} {} {} {} {} {})\n'.format(str(label), xmax, xmin, ymax, ymin, zmax, zmin, h1, h2, h3, h4, h5, h6)
+        newEntry = '{} RPP {} {} {} {} {} {} *trcl=(3J {} {} {} {} {} {})\n'.format(str(label), xmin, xmax, ymin, ymax, zmin, zmax, h1, h2, h3, h4, h5, h6)
     else:
-        newEntry = '{} RPP {} {} {} {} {} {}\n'.format(str(label), xmax, xmin, ymax, ymin, zmax, zmin)
+        newEntry = '{} RPP {} {} {} {} {} {}\n'.format(str(label), xmin, xmax, ymin, ymax, zmin, zmax)
     return newEntry
     
 # This function converts SCALE media objects into MCNP cell cards. Also adds the SCALE unit to the MCNP input as a universe entry
