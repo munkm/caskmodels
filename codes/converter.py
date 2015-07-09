@@ -221,7 +221,7 @@ def main():
     print '\n\nConverting to MCNP Input...'
     # This determines what is in each line and then calls the appropriate function to convert the line for MCNP
     for line in lines:
-        if Find('unit',line) == True:
+        if Find(r'unit \d+',line) == True:
             match = re.search(r'unit \d+', line)
             uni = match.group()[5:]
         elif Find('com=', line) == True:
