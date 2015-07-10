@@ -1,4 +1,5 @@
 ### Update List
+* [Update: 2015/07/10](#update-20150710)
 * [Update: 2015/07/06](#update-20150706)
 * [Update: 2015/06/26](#update-20150626)
 * [Update: 2015/06/19](#update-20150619)
@@ -6,6 +7,19 @@
 * [Sample Update: 2000/01/01](#update: 2000/01/01)
 
 ***
+
+### Update: 2015/07/10
+**This Weeks Progress**
+* Finished SCALE to MCNP conversion script
+  * Added readme file to codes folder with information on script
+  * Added inline comments to script for reference
+* Started MCNP Cask model
+  * Converted all SCALE materials in MCNP materials
+  * Constructed first assembly guide tube. Working on fuel pin lattice
+  
+**Plan for Next Week:**
+* Continue working on MCNP model (Yay)
+
 
 ### Update: 2015/07/06
 **This Weeks Progress**
