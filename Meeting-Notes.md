@@ -1,4 +1,5 @@
 ### Meeting List
+* [Meeting: 2015/07/12](#meeting-20150712)
 * [Meeting: 2015/07/07](#meeting-20150707)
 * [Meeting: 2015/06/30](#meeting-20150630)
 * [Meeting: 2015/06/29](#meeting-20150629)
@@ -8,6 +9,18 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+
+### Meeting 2015/07/12
+Attendees: Garrett, Madicken
+
+Main Notes: 
+* Garrett finished the conversion from MCNP to SCALE script. 
+  * Remember to add a license
+  * Can choose a license at [http://choosealicense.com/](http://choosealicense.com/)
+* Working on the conversion to MCNP
+  * Having trouble with the lattice subuniverse rendering.
+  * If this issue is still around by Wednesday or Thursday, let Madicken know and she will try to talk to the neutronics group about lattice structure issues. 
+
 
 ### Meeting 2015/07/07
 Attendees: Garrett, Madicken
