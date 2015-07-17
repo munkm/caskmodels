@@ -10,6 +10,26 @@
 
 ***
 
+### Meeting 2015/07/17
+Attendees: Garrett, Madicken, pseudo-Kelly
+
+Main Notes: 
+* Kelly crashed meeting to talk about boys. 
+
+Cask Model Progress
+* Garrett made the cannister, the tie rods, and the support rings inside the cannister. All of these things are part of the cannister. 
+  * The whole cannister is pretty much finished. 
+* Garrett also managed to resolve the issues with the lattice structure.
+  * The entire set of fuel assemblies have been added to the cannister. 
+  * Garrett is at the point where the cannister has been finished, but the packaging still needs to be added.
+* Packaging has been started 
+  * Added concrete, inner steel liner, lid, shield plug. 
+  * Kelly gave some great rhyming tips. 
+* Still to do:
+  * Bottom weldment (this is unbiquitous in the input), air inlets and air outlets.  
+  * Tentatively garrett thinks he can finish the model NEXT WEEK. 
+  * Put 'special files' in secret repo. 
+
 ### Meeting 2015/07/12
 Attendees: Garrett, Madicken
 
