@@ -1,5 +1,6 @@
 ### Meeting List
-* [Meeting: 2015/07/12](#meeting-20150712)
+* [Meeting: 2015/07/17](#meeting-20150717)
+* [Meeting: 2015/07/13](#meeting-20150713)
 * [Meeting: 2015/07/07](#meeting-20150707)
 * [Meeting: 2015/06/30](#meeting-20150630)
 * [Meeting: 2015/06/29](#meeting-20150629)
@@ -26,11 +27,11 @@ Cask Model Progress
   * Added concrete, inner steel liner, lid, shield plug. 
   * Kelly gave some great rhyming tips. 
 * Still to do:
-  * Bottom weldment (this is unbiquitous in the input), air inlets and air outlets.  
+  * Bottom weldment (this is ubiquitous in the input), air inlets and air outlets.  
   * Tentatively garrett thinks he can finish the model NEXT WEEK. 
   * Put 'special files' in secret repo. 
 
-### Meeting 2015/07/12
+### Meeting 2015/07/13
 Attendees: Garrett, Madicken
 
 Main Notes: 

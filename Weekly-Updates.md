@@ -9,7 +9,7 @@
 
 ***
 
-### Update: 2015/07/10
+### Update: 2015/07/17
 **This Weeks Progress**
 * Made major progress on MCNP model
   * Got Lattice to work for fuel pin structure
