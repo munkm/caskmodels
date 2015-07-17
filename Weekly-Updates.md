@@ -1,4 +1,5 @@
 ### Update List
+* [Update: 2015/07/17](#update-20150717)
 * [Update: 2015/07/10](#update-20150710)
 * [Update: 2015/07/06](#update-20150706)
 * [Update: 2015/06/26](#update-20150626)
@@ -7,6 +8,16 @@
 * [Sample Update: 2000/01/01](#update: 2000/01/01)
 
 ***
+
+### Update: 2015/07/10
+**This Weeks Progress**
+* Made major progress on MCNP model
+  * Got Lattice to work for fuel pin structure
+  * Made canister and basket assembly geometry and replicated fuel assembly
+
+**Plan for Next Week:**
+* Develop concrete overpack geometry.
+
 
 ### Update: 2015/07/10
 **This Weeks Progress**
