@@ -51,6 +51,10 @@ def convertCylinder(entry, cellMod):
     
     label = int(label) + cellMod
     
+    Hx = 0.0
+    Hy = 0.0
+    Hz = zTop - zBot
+    
     # Determine if the surface origin is translated and what the coordinates are
     if re.search(r'x=\S+', entry.lower()):
         x = re.search(r'x=\S+', entry.lower())
@@ -64,13 +68,10 @@ def convertCylinder(entry, cellMod):
         y = 0.0
     if re.search(r'z=\S+', entry.lower()):
         z = re.search(r'z=\S+', entry.lower())
-        z = float(z.group()[2:])
+        z = float(z.group()[2:]) + zBot
     else:
         z = zBot
         
-    Hx = 0.0
-    Hy = 0.0
-    Hz = zTop - zBot
     
     # Determine if the surface is rotated or not and also concatonates the final MCNP card
     if Find('a1=', entry) == True:
@@ -165,6 +166,40 @@ def convertCuboid(entry,cellMod):
         newEntry = '{} RPP {} {} {} {} {} {}\n'.format(str(label), xmin, xmax, ymin, ymax, zmin, zmax)
     return newEntry
     
+def convertCone(entry,cellMod):
+    comps = entry.split()
+    label = comps[1]
+    
+    label = int(label) + cellMod
+    
+    Rt = comps[2]
+    Zt = float(comps[3])
+    Rb = comps[4]
+    Zb = float(comps[5])
+    
+    Hx = 0.0
+    Hy = 0.0
+    Hz = Zt - Zb
+    
+    if re.search(r'x=\S+', entry.lower()):
+        x = re.search(r'x=\S+', entry.lower())
+        x = float(x.group()[2:])
+    else:
+        x = 0.0
+    if re.search(r'y=\S+', entry.lower()):
+        y = re.search(r'y=\S+', entry.lower())
+        y = float(y.group()[2:])
+    else:
+        y = 0.0
+    if re.search(r'z=\S+', entry.lower()):
+        z = re.search(r'z=\S+', entry.lower())
+        z = float(z.group()[2:]) + Zb
+    else:
+        z = Zb
+    
+    newEntry = '{} TRC {} {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), Rb, Rt)
+    return newEntry
+    
 # This function converts SCALE media objects into MCNP cell cards. Also adds the SCALE unit to the MCNP input as a universe entry
 # Input: SCALE media line (entry), what number to start labeling the MCNP cells (cellNum), what factor surfaces are modified by (cellMod), the materials dictionary (matdict), cell's universe (uni)
 # returns the MCNP cell card
@@ -241,6 +276,9 @@ def main():
             newSurfaceInput += newEntry
         elif Find('cuboid', line) == True:
             newEntry = convertCuboid(line, cellMod)
+            newSurfaceInput += newEntry
+        elif Find('cone', line) == True:
+            newEntry = convertCone(line, cellMod)
             newSurfaceInput += newEntry
         elif Find('media', line) == True:
             newEntry = makeCell(line, cellNum, cellMod, d, uni)
