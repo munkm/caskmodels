@@ -6,7 +6,7 @@ This folder contains codes used for the Cask Modeling Project
 
 **Description**
 
-This is a python script designed to aid in the conversion of a SCALE input to an MCNP input. This script is to only be used for geometry conversion, and currently only converts special cases of cuboids, cylinders, and ycylinders. The script has builtin functionality for converting origin translations and rotations. The script will also add universe entries to the MCNP cards corresponding to the SCALE unit number the SCALE geometry is in, provided the line declaring the unit is included. The script will pass through any SCALE format comments into MCNP format comments.
+This is a python script designed to aid in the conversion of a SCALE input to an MCNP input. This script is to only be used for geometry conversion, and currently only converts special cases of cuboids, cylinders, and ycylinders. The script has builtin functionality for converting origin translations and rotations (Currently only converts a1 rotations (x-axis)). The script will also add universe entries to the MCNP cards corresponding to the SCALE unit number the SCALE geometry is in, provided the line declaring the unit is included. The script will pass through any SCALE format comments into MCNP format comments.
 
 The script will convert a specified section of SCALE input and output two new text files. One file named "MCNP_Surface_Input.txt", which will contain the converted MCNP surface cards to be added to the surfaces block of the MCNP input. The other output file is named "MCNP_Cell_Input.txt", which will contain cell cards to be added to the cells block of the MCNP input.
 
