@@ -37,6 +37,17 @@ def Find(pat, text):
     else:
         bool = False
     return bool
+ 
+# This function creates a transform card for a given x-axis angle tranform (angle). Returns the tranform card.   
+def transform(angle):
+    h1 = angle
+    h2 = 90-angle
+    h3 = 90
+    h4 = 90 + angle
+    h5 = angle
+    h6 = 90
+    tr= '*TRn 3J {} {} {} {} {} {}'.format(angle, h1, h2, h3, h4, h5, h6)
+    return tr
     
 # This function converters SCALE cylinder objects into MCNP RCC macrobody surfaces.
 # Input: Takes the line containing the SCALE cylinder (entry), and the value to increase the surface id by (cellMod)
@@ -77,15 +88,11 @@ def convertCylinder(entry, cellMod):
     if Find('a1=', entry) == True:
         theta = re.search('a1=\S+', entry.lower())
         theta = float(theta.group()[3:])
-        h1 = theta
-        h2 = 90-theta
-        h3 = 90
-        h4 = 90 + theta
-        h5 = theta
-        h6 = 90
-        newEntry = '{} RCC {} {} {} {} {} {} {} *trcl=(3J {} {} {} {} {} {})\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r, h1, h2, h3, h4, h5, h6)
+        tr = transform(theta)
+        newEntry = '{} n RCC {} {} {} {} {} {} {}\nc replace n with number and place following tr card in data cards: \'{}\'\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r, tr)
     else:
         newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
+        
     return newEntry
     
 # This function converters SCALE ycylinder objects into MCNP RCC macrobody surfaces.
@@ -124,21 +131,17 @@ def convertYCylinder(entry, cellMod):
     if Find('a1=', entry) == True:
         theta = re.search('a1=\S+', entry.lower())
         theta = float(theta.group()[3:])
-        h1 = theta
-        h2 = 90-theta
-        h3 = 90
-        h4 = 90 + theta
-        h5 = theta
-        h6 = 90
-        newEntry = '{} RCC {} {} {} {} {} {} {} *trcl=(3J {} {} {} {} {} {})\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r, h1, h2, h3, h4, h5, h6)
+        tr = transform(theta)
+        newEntry = '{} n RCC {} {} {} {} {} {} {}\nc replace n with number and place following tr card in data cards: \'{}\'\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r, tr)
     else:
         newEntry = '{} RCC {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), r)
+        
     return newEntry
     
 # This function converters SCALE cuboid objects into MCNP RPP macrobody surfaces.
 # Input: Takes the line containing the SCALE cuboid (entry), and the value to increase the surface id by (cellMod)
 # Returns the final MCNP surace card entry
-def convertCuboid(entry,cellMod):
+def convertCuboid(entry, cellMod):
     comps = entry.split()
     label = comps[1]
     
@@ -154,19 +157,18 @@ def convertCuboid(entry,cellMod):
     # Determine if the cuboid is rotated and concatonate the MCNP input
     if Find('a1=', entry) == True:
         theta = re.search('a1=\S+', entry.lower())
-        theta = int(theta.group()[3:])
-        h1 = theta
-        h2 = 90-theta
-        h3 = 90
-        h4 = 90 + theta
-        h5 = theta
-        h6 = 90
-        newEntry = '{} RPP {} {} {} {} {} {} *trcl=(3J {} {} {} {} {} {})\n'.format(str(label), xmin, xmax, ymin, ymax, zmin, zmax, h1, h2, h3, h4, h5, h6)
+        theta = float(theta.group()[3:])
+        tr = transform(theta)
+        newEntry = '{} n RPP {} {} {} {} {} {}\nc replace n with number and place following tr card in data cards: \'{}\'\n'.format(str(label), xmin, xmax, ymin, ymax, zmin, zmax, tr)
     else:
         newEntry = '{} RPP {} {} {} {} {} {}\n'.format(str(label), xmin, xmax, ymin, ymax, zmin, zmax)
+        
     return newEntry
-    
-def convertCone(entry,cellMod):
+
+# This function converters SCALE cone objects into MCNP TRC macrobody surfaces.
+# Input: Takes the line containing the SCALE cone (entry), and the value to increase the surface id by (cellMod)
+# Returns the final MCNP surace card entry    
+def convertCone(entry, cellMod):
     comps = entry.split()
     label = comps[1]
     
@@ -210,7 +212,7 @@ def makeCell(entry, cellNum, cellMod, matdict, uni):
     
     newEntry = '{} {} {}'.format(cellNum, mat, str(matdict[mat]))
     
-    # The conventions for defining cells is opposite in SCALE and MCNP. This fixes the convention and adds the surface label modification factor
+    # The convention for defining cells is opposite in SCALE and MCNP. This fixes the convention and adds the surface label modification factor
     for i in defs:
         i = float(i)
         if i > 0:
@@ -289,6 +291,7 @@ def main():
     # Writes the complete MCNP surface and cell inputs to their corresponding output file.       
     inputWriter('MCNP_Surface_Input.txt', newSurfaceInput)
     inputWriter('MCNP_Cell_Input.txt', newCellInput)
+    
     
     print 'Conversion complete.'
     
