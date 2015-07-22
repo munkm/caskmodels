@@ -1,4 +1,5 @@
 ### Meeting List
+* [Meeting: 2015/07/22](#meeting-20150722)
 * [Meeting: 2015/07/17](#meeting-20150717)
 * [Meeting: 2015/07/13](#meeting-20150713)
 * [Meeting: 2015/07/07](#meeting-20150707)
@@ -10,6 +11,19 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+
+### Meeting 2015/07/22
+Attendees: Rachel, Garrett, synth-Madicken
+
+Main Notes:
+* Showed Rachel the converter script. Discussed the MIT license and she thought it was appropriate (as well as the creative commons license being the parent directory).
+
+MCNP Cask Model Progress:
+* All 24 assemblies are modeled, all based off assembly #9 in the original SCALE model.
+* Canister and basket assembly structure complete.
+* Outer Concrete dry cask structure modeled as well as base weldment, air inlets, shield plug, and cask lid.
+* The only geometry left to model are the top air outlets and the structural rebar inside the concrete.
+
 
 ### Meeting 2015/07/17
 Attendees: Garrett, Madicken, pseudo-Kelly
