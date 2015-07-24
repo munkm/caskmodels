@@ -46,7 +46,7 @@ def transform(angle):
     h4 = 90 + angle
     h5 = angle
     h6 = 90
-    tr= '*TRn 3J {} {} {} {} {} {}'.format(angle, h1, h2, h3, h4, h5, h6)
+    tr= '*TRn 3J {} {} {} {} {} {}'.format(h1, h2, h3, h4, h5, h6)
     return tr
     
 # This function converters SCALE cylinder objects into MCNP RCC macrobody surfaces.
