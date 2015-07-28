@@ -202,6 +202,40 @@ def convertCone(entry, cellMod):
     newEntry = '{} TRC {} {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), Rb, Rt)
     return newEntry
     
+def convertRing(entry, cellMod):
+    comps = entry.split()
+    label = comps[1]
+    
+    label = int(label) + cellMod
+    
+    RIn = float(comps[2])
+    ROut = float(comps[3])
+    Zt = float(comps[4])
+    Zb = float(comps[5])
+    
+    radius = ROut-((ROut-RIn)/2)
+    B = (Zt-Zb)/2
+    C = (ROut-RIn)/2
+    
+    if re.search(r'x=\S+', entry.lower()):
+        x = re.search(r'x=\S+', entry.lower())
+        x = float(x.group()[2:])
+    else:
+        x = 0.0
+    if re.search(r'y=\S+', entry.lower()):
+        y = re.search(r'y=\S+', entry.lower())
+        y = float(y.group()[2:])
+    else:
+        y = 0.0
+    if re.search(r'z=\S+', entry.lower()):
+        z = re.search(r'z=\S+', entry.lower())
+        z = float(z.group()[2:]) + Zb + B
+    else:
+        z = Zb + B
+    
+    newEntry = '{} TZ {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(radius), str(B), str(C))
+    return newEntry
+    
 # This function converts SCALE media objects into MCNP cell cards. Also adds the SCALE unit to the MCNP input as a universe entry
 # Input: SCALE media line (entry), what number to start labeling the MCNP cells (cellNum), what factor surfaces are modified by (cellMod), the materials dictionary (matdict), cell's universe (uni)
 # returns the MCNP cell card
@@ -281,6 +315,9 @@ def main():
             newSurfaceInput += newEntry
         elif Find('cone', line) == True:
             newEntry = convertCone(line, cellMod)
+            newSurfaceInput += newEntry
+        elif Find('ring', line) == True:
+            newEntry = convertRing(line, cellMod)
             newSurfaceInput += newEntry
         elif Find('media', line) == True:
             newEntry = makeCell(line, cellNum, cellMod, d, uni)
