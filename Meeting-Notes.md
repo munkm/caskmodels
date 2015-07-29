@@ -1,4 +1,5 @@
 ### Meeting List
+* [Meeting: 2015/07/27](#meeting-20150727)
 * [Meeting: 2015/07/22](#meeting-20150722)
 * [Meeting: 2015/07/17](#meeting-20150717)
 * [Meeting: 2015/07/13](#meeting-20150713)
@@ -11,6 +12,25 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+
+### Meeting 2015/07/27
+Attendees: Garrett, Madicken
+
+Main Notes:
+* Kaushik still hasn't e-mailed garrett back about source definition files. 
+  * **Madicken** follow-up on Wednesday (one week from e-mail sending)
+  * Maybe ask Tara if he is around on Friday call? 
+* Garrett's meeting with Rachel went well. 
+  * **Garrett** add description of software and license to header of converter script.
+  * **Garrett** next meeting with rachel, do a demo of your converter script. It is worth showing off. 
+* Garrett will be gone from July 29 to August 11 
+  * Europe is awesome
+  * Pretend you're living IRL game of thrones. 
+* MCNP model
+  * pretty much the entire model is finished with the exception of the air outlets and rebar. 
+  * Garrett thinks he can have the air outlets done before he leaves on Wednesday. 
+  * Make two MCNP models: One with rebar, one without. 
+* Get software installed on savio 
 
 ### Meeting 2015/07/22
 Attendees: Rachel, Garrett, synth-Madicken
