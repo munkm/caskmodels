@@ -3,7 +3,9 @@
 Created on Wed Jul 01 16:19:21 2015
 @author: Garrett Baltz
 
-This is a script designed to aid in the conversion of a SCALE input to an MCNP input. This script is to only be used for geometry conversion, and currently only converts special cases of cuboids, cylinders, and ycylinders.
+This script is under The MIT License (MIT) Copyright (c) 2015 Garrett Baltz. See full license in github directory.
+
+This is a script designed to aid in the conversion of a SCALE input to an MCNP input. This script is to only be used for geometry conversion, and currently only converts special cases of cuboids, cylinders, ycylinders, rings, and cones.
 
 The input argument line takes the path of the SCALE input file to convert. The script will then prompt the user to enter the start line and end line to specify what section of the input to convert. The script will also ask at what number to start labeling the MCNP cells, as there is no corollary in SCALE. The script will finally ask if you want to add a factor to the labeling of the surfaces to account for the ability to reuse surface labels in SCALE but not in MCNP.
 
@@ -202,6 +204,9 @@ def convertCone(entry, cellMod):
     newEntry = '{} TRC {} {} {} {} {} {} {} {}\n'.format(str(label), str(x), str(y), str(z), str(Hx), str(Hy), str(Hz), Rb, Rt)
     return newEntry
     
+# This function converters SCALE ring objects into MCNP TZ torus surfaces.
+# Input: Takes the line containing the SCALE cone (entry), and the value to increase the surface id by (cellMod)
+# Returns the final MCNP surace card entry      
 def convertRing(entry, cellMod):
     comps = entry.split()
     label = comps[1]
