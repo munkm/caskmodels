@@ -1,4 +1,5 @@
 ### Update List
+* [Update: 2015/08/14](#update-20150814)
 * [Update: 2015/07/24](#update-20150724)
 * [Update: 2015/07/17](#update-20150717)
 * [Update: 2015/07/10](#update-20150710)
@@ -9,6 +10,21 @@
 * [Sample Update: 2000/01/01](#update: 2000/01/01)
 
 ***
+
+### Update: 2015/07/24
+**This Weeks Progress:**
+* MCNP model without rebar was complete last week.
+  * Input added to private repository.
+* MCNP model with rebar was completed this week.
+
+**Future Plans/ Items Remaining:**
+* Waiting on MCNP source distributions from Kaushik.
+* Add information page on MCNP models.
+* Finish SCALE input?
+  * Still need to make discretized mesh for CADIS
+  * wanted to test before give to Kaushik?
+
+
 
 ### Update: 2015/07/24
 **This Weeks Progress**
