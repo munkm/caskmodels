@@ -12,6 +12,19 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+### Meeting 2015/08/17
+Attendees: Garrett, Madicken
+
+Main Notes:
+* Model is done in MCNP
+  * **Garrett:** Check that all geometries used in new MCNP models are compatible with ADVANTG. 
+    * Maybe make a note of things that are not compatible with ADVANTG so we're aware of that down the line. 
+  * **Madicken:** Follow up with Kaushik about the source distribution, since he hasn't e-mailed yet. 
+* **Madicken** Get SCALE 6.2b installed on savio so we can test the model before we give it back to ORNL. 
+  * We need 6.2b for the source distribution in the scale model.
+  * **Garrett:** Test the scale model with Mavric. 
+ 
+
 
 ### Meeting 2015/07/27
 Attendees: Garrett, Madicken
