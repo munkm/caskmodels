@@ -15,9 +15,15 @@
 ***
 
 ### MCNP VCC Dry Storage Cask Images
-* These are images of the MCNP cask model. Please excuse the hideous color scheme. I have no idea how to change it in VisEd.
-* This is a view of a vertical slice of the VCC dry cask modified according to the changes described in [Cask Information](./Cask-Information.md). Here you can see the entire cask. Seen in the concrete overpack are the cross-sections of the axial rebar rings as well as 2 of the vertical rebars. Seen at the top of the cask is the shield plug and cask lid. At the bottom of the cask a slice through the weldment structure is seen, along with 2 of the air inlets which protrude from the base weldment to the outside of the cask. 
+* These are images of the MCNP cask model.
+* This is a view of a vertical slice of the dry cask. Here you can see the entire cask. Seen in the concrete overpack are the cross-sections of the axial rebar rings as well as 2 of the vertical rebars. Seen at the top of the cask is the shield plug and cask lid. At the bottom of the cask a slice through the weldment structure is seen, along with 2 of the air inlets which protrude from the base weldment to the outside of the cask. 
 ![image_1]
-(http://munkm.github.io/caskmodels/Images/VCC_center_side_profile.png)
+(http://munkm.github.io/caskmodels/Images/MCNP_side.png)
+* This is a view of the cross section of the cask.
+![image_1]
+(http://munkm.github.io/caskmodels/Images/MCNP_xs.png)
+* This is a view of the base weldment and air inlets at the bottom of the cask.
+![image_1]
+(http://munkm.github.io/caskmodels/Images/MCNP_base_weldment.png)
 
 
