@@ -1,4 +1,6 @@
 ### Meeting List
+
+* [Meeting: 2015/08/19](#meeting-20150819)
 * [Meeting: 2015/08/17](#meeting-20150817)
 * [Meeting: 2015/07/27](#meeting-20150727)
 * [Meeting: 2015/07/22](#meeting-20150722)
@@ -13,6 +15,20 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+
+### Meeting 2015/08/19
+Attendees: Garrett, Rachel, Madicken
+* Updates:
+  * Garrett added a description of the MCNP model on the github page
+  * Garrett managed to run ORAGAMI with kaushik's help.
+    * Garrett is working on making a source definition in MCNP.
+
+* Next steps:
+  * Continue to get source definiton in MCNP input.
+  * ** Rachel: ** Make a projects folder on savio that garrett can upload his files to. -- done in meeting.
+  * Get SCALE installed on savio.
+    * **Madicken:** work with garrett to upload stuff on savio. Give tutorial on group permissions, etc.
+
 ### Meeting 2015/08/17
 Attendees: Garrett, Madicken
 
