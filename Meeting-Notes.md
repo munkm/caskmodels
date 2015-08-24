@@ -1,5 +1,6 @@
 ### Meeting List
 
+* [Meeting: 2015/08/24](#meeting-20150824)
 * [Meeting: 2015/08/19](#meeting-20150819)
 * [Meeting: 2015/08/17](#meeting-20150817)
 * [Meeting: 2015/07/27](#meeting-20150727)
@@ -15,6 +16,18 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+### Meeting 2015/08/24
+Attendees: Garrett, Madicken
+Updates:
+* Garrett ran ORAGAMI, extracted source terms into excel 
+* Garrett researched SDEF, implemented the source terms with this in MCNP.
+    * MCNP example was very helpful. 
+  * **Garrett** Add comments to MCNP deck in each line describing the source cards.
+  * **Garrett** Upload the images from VisEd on the repo. They look great. 
+  * **Garrett** Add some images (renderings from SCALE) of the cask model to the github page. 
+
+Other things: 
+* Madicken gave garrett a short tutorial on savio stuff. 
 
 ### Meeting 2015/08/19
 Attendees: Garrett, Rachel, Madicken
