@@ -1,4 +1,5 @@
 ### Update List
+* [Update: 2015/08/24](#update-20150824)
 * [Update: 2015/08/14](#update-20150814)
 * [Update: 2015/07/24](#update-20150724)
 * [Update: 2015/07/17](#update-20150717)
@@ -11,7 +12,18 @@
 
 ***
 
-### Update: 2015/07/24
+### Update: 2015/08/24
+**This Weeks Progress:**
+* Added MCNP model information page detailing conversion and showing pictures of cask model.
+* Successfully edited and ran ORIGAMI to get source terms for assembly.
+  * Extracted all source terms into an excel file for manipulation.
+* Took notes on MCNP SDEF card.
+* Started developing SDEF card. Completed source description for assembly #1.
+
+**Future Plans**
+* Finish source terms for all assemblies in cask.
+
+### Update: 2015/08/14
 **This Weeks Progress:**
 * MCNP model without rebar was complete last week.
   * Input added to private repository.
