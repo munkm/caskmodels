@@ -2,7 +2,7 @@
 * The MCNP model is based off the SCALE VCC cask model that was developed from the original transportation cask (see [Cask-Information](./Cask-Information.md)).
 * The MCNP model has all the same dimensions as the SCALE model, as it was developed primarily by using the SCALE to MCNP converter that automatically pulled in the correct dimensions.
   * Instead of containing 24 unique fuel assemblies, the MCNP model is filled with one characteristic fuel assembly. This fuel assembly is assembly #9 in the original SCALE model. This assembly was chosen because it had the highest burnup and the shortest cooling time, meaning it would have the highest activity.
-
+* NOTE: As of 11/19/2015 all the MCNP models used do not contain the rebar ring structures in the concrete overpack. This was due to an issue where particles were being lost in the toroid cells.
 ***
   
 ### SCALE to MCNP conversion

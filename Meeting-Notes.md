@@ -1,5 +1,6 @@
 ### Meeting List
 
+* [Meeting: 2015/11/17](#meeting-20151117)
 * [Meeting: 2015/08/24](#meeting-20150824)
 * [Meeting: 2015/08/19](#meeting-20150819)
 * [Meeting: 2015/08/17](#meeting-20150817)
@@ -16,6 +17,17 @@
 * [Meeting: 2015/06/15](#meeting-20150615)
 
 ***
+### Meeting 2015/11/17
+Attendees: Garrett, Madicken
+Updates:
+* Discussed issue where running MCNP on Savio was generating a segmentation fault.
+  * This was resolved by changing the memory dump frequency.
+* Garrett successfully ran the side and top single detector input decks, and the mesh input deck.
+
+Plans for next week:
+* Create visualizations for MCNP results.
+* Start discussing ADVANTG with Madicken and working on generating and running ADVANTG with modified exnihilo.
+
 ### Meeting 2015/08/24
 Attendees: Garrett, Madicken
 Updates:
