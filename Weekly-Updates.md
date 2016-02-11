@@ -1,4 +1,5 @@
 ### Update List
+* [Update: 2016/02/11](#update-20160211)
 * [Update: 2015/10/07](#update-20151007)
 * [Update: 2015/08/24](#update-20150824)
 * [Update: 2015/08/14](#update-20150814)
@@ -12,6 +13,28 @@
 * [Sample Update: 2000/01/01](#update: 2000/01/01)
 
 ***
+
+### Update: 2016/02/11
+Oh my, we've been away for some time.
+
+**Progress Since Last Update:**
+* Ran cask models for cylindrical and cartesian tally meshes.
+* Figured out how to mcplot on cluster using x windows to generate tally plots.
+
+**This Weeks Progress:**
+* Characterization Problems Input Generation:
+    * Generated input deck for prob_1 based on the image on the angular methods dropbox.
+        * the mesh tally would still have to be edited for this problem if FW-CADIS desired.
+    * Generated input deck for prob_2.
+        * same thing regarding mesh tally.
+        
+**Future Plans:**
+* Generate all simple characterization problems on angular methods dropbox.
+* Generate reflected beam problem.
+* Discuss other simple/more intermediate characterization problems at next meeting.
+* Generate advantage inputs, run characterization problems.
+
+
 
 ### Update: 2015/10/07
 **Progress Since Last Update:**
