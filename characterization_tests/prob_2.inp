@@ -35,24 +35,24 @@ c -------------------------------------------------------------------
 c
 c boundaries
 1    px   0
-2    px   350
+2    px   500
 *3    py   0
-4    py   300
+4    py   450
 *5    pz   0 
 *6    pz   200
 c
 c            maze surfaces
 12   px   100
-13   px   150
-14   px   200
-15   px   250
-16   py   150
-17   py   200
+13   px   200
+14   px   300
+15   px   400
+16   py   250
+17   py   350
 c
 c           reflective boundaries the source
 c
 c
-50  rpp   220 230 1 11 50 60                        $ NaI detector 10x10x10
+50  rpp   345 355 1 11 50 60                        $ NaI detector 10x10x10
 
 c -------------------------------------------------------------------
 c
@@ -91,7 +91,7 @@ m4    1001.70c -0.01
       26000.50c -0.014
 c
 c
-sdef POS 125.00 6.00 145.00 PAR=1 ERG=10.0  
+sdef POS 150.00 6.00 145.00 PAR=1 ERG=10.0  
 c
 c      tally for fw-CADIS method
 c fmesh24:n origin -100 -50 0
