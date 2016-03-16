@@ -1,0 +1,127 @@
+WS_problem
+c
+c This is a characterization problem based on the Wilson Slaybaugh paper
+c it consists of a fission source and water, separated by a steel
+c with a steel plate traversing the water.
+c
+c -------------------------------------------------------------------
+c
+c              Cell Cards
+c
+c -------------------------------------------------------------------
+c     source
+1     4 -1.0        1 -2 3 -4 5 -12       imp:n=1 
+c 
+c     steel
+2     2  0.0874     1 -2 3 -4 12 -13      imp:n=1
+3     2  0.0874     10 -11 3 -4 13 -14    imp:n=1 
+c 
+c     water zones
+4     3 -1.0        1 -10 3 -4 13 -14     imp:n=1 
+5     3 -1.0        11 -2 3 -4 13 -14     imp:n=1 
+c 
+c     air
+6     1 4.96370e-5  1 -2 3 -4 14 -6       imp:n=1 
+c
+999    0  -1:2:-3:4:-5:6       imp:n=0 
+
+c -------------------------------------------------------------------
+c
+c              Surface Cards
+c
+c -------------------------------------------------------------------
+c
+c boundaries
+1   px   0 
+2   px   53
+3   py   0 
+4   py   50 
+5   pz   0 
+6   pz   140
+c
+c steel plate
+10  px   25 
+11  px   28 
+c 
+c vertical boundaries
+12  pz   15
+13  pz   30 
+14  pz   130
+c
+c
+
+c -------------------------------------------------------------------
+c
+c               Material Cards
+c
+c -------------------------------------------------------------------
+mode n
+m1    7014.70c  3.89551e-05  $ air @ 293.6K
+      7015.70c  1.43884e-07  $ total = 4.96370e-05
+      8016.70c  1.05340e-05
+      8017.70c  4.01267e-09
+c
+c
+c
+c ---------------------------------------------------------
+c Carbon Steel with total = 0.0874 
+c ---------------------------------------------------------
+m2    6000.70c 0.0449 
+      26054.70c 0.0558 
+      26056.70c 0.8763
+      26057.70c 0.0202 
+      26058.70c 0.0027
+c
+c
+c
+c  water
+m3   1001 -0.1120471  
+     8016 -0.8879529
+mt3  lwtr.04t
+c 
+c 
+c 
+c Homogenized U02 Fuel - Dry =  -3.8195
+m4     7014 -8.5993E-05 
+       8016 -9.8121E-02  
+       24000 -1.7199E-04 
+       26000 -2.1498E-04 
+       40000 -1.6893E-01 
+       50000 -2.5798E-03 
+       92235 -3.6495E-02  
+       92238 -6.9340E-01
+c
+c
+c
+c --- volumetric fission source inside a rectangular parallelepiped
+SDEF X=d1 Y=d2 Z=d3 ERG=d4 PAR=1
+SI1 0.0 53.0 $ x-range limits for source volume
+SP1 0 1 $ uniform probability over x-range
+SI2 0.0 50.0 $ y-range limits for source volume
+SP2 0 1 $ uniform probability over y-range
+SI3 0.0 15.0 $ z-range limits for source volume
+SP3 0 1 $ uniform probability over z-range
+c  Watt fission spectrum for U-235 thermal fission 
+SP4 -3 0.988 2.249  
+c
+c      tally for fw-CADIS method
+c fmesh24:n origin -100 -50 0
+c         imesh -50 50 100
+c         jmesh 50  
+c         kmesh 40 60 100
+c         iints 50 200 50
+c         jints 100
+c         kints 20 20 20
+c
+c       tally for CADIS method
+f44:n   31
+e44     1.0000E-08 3.0000E-08 5.0000E-08 1.0000E-07 2.2500E-07 
+        3.2500E-07 4.1399E-07 8.0000E-07 1.0000E-06 1.1253E-06
+        1.3000E-06 1.8554E-06 3.0590E-06 1.0677E-05 2.9023E-05
+        1.0130E-04 5.8295E-04 3.0354E-03 1.5034E-02 1.1109E-01
+        4.0762E-01 9.0718E-01 1.4227E+00 1.8268E+00 3.0119E+00
+        6.3763E+00 2.0000E+01
+fm44    -1.0 3 -1
+c
+nps 1000000
+print
