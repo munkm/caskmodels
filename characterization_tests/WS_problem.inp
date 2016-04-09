@@ -10,7 +10,7 @@ c              Cell Cards
 c
 c -------------------------------------------------------------------
 c     source
-1     4 -1.0        1 -2 3 -4 5 -12       imp:n=1 
+1     4 -10.3196        1 -2 3 -4 5 -12       imp:n=1 
 c 
 c     steel
 2     2  0.0874     1 -2 3 -4 12 -13      imp:n=1
@@ -75,21 +75,18 @@ c
 c
 c
 c  water
-m3   1001 -0.1120471  
-     8016 -0.8879529
+m3   1001.70c -0.1120471  
+     8016.70c -0.8879529
 mt3  lwtr.04t
 c 
 c 
 c 
-c Homogenized U02 Fuel - Dry =  -3.8195
-m4     7014 -8.5993E-05 
-       8016 -9.8121E-02  
-       24000 -1.7199E-04 
-       26000 -2.1498E-04 
-       40000 -1.6893E-01 
-       50000 -2.5798E-03 
-       92235 -3.6495E-02  
-       92238 -6.9340E-01
+c Homogenized U02 Fuel, water and zirc - Dry =  -3.8195
+m4     1001.70c  0.24
+       8016.70c  0.12  
+       40000.66c 0.18  
+       92235.70c 0.023  
+       92238.70c 0.437
 c
 c
 c
@@ -105,13 +102,13 @@ c  Watt fission spectrum for U-235 thermal fission
 SP4 -3 0.988 2.249  
 c
 c      tally for fw-CADIS method
-c fmesh24:n origin -100 -50 0
-c         imesh -50 50 100
-c         jmesh 50  
-c         kmesh 40 60 100
-c         iints 50 200 50
-c         jints 100
-c         kints 20 20 20
+fmesh24:n origin 0 0 0
+        imesh 53
+        jmesh 50  
+        kmesh 140
+        iints 52
+        jints 49
+        kints 139
 c
 c       tally for CADIS method
 c f44:n   31
