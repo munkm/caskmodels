@@ -31,12 +31,12 @@ c              Surface Cards
 c
 c -------------------------------------------------------------------
 c
-*1   pz   0
-*2   pz   100
-*3   py   -50
-*4   py    50
+1   pz   0
+2   pz   100
+3   py   -50
+4   py    50
 c           area behind the source
-*11  px   -100                                          $ Back wall 
+11  px   -100                                          $ Back wall 
 c
 c            maze surfaces
 12   px   -50
@@ -46,7 +46,7 @@ c            maze surfaces
 16   py   5
 17   py   -5
 c             area containing the detector
-*41  px    100                                           $ Other back wall
+41  px    100                                           $ Other back wall
 c
 c
 50  rpp  70 80   -20 -10  45 55                          $ NaI detector 
@@ -86,7 +86,13 @@ m4    6000.70c 0.0449
       26058.70c 0.0027
 c
 c
-sdef POS -75.0 0.0 50.0 PAR=1 ERG=10.0  
+SDEF X=d1 Y=d2 Z=d3 PAR=1 ERG=10.0 VEC=1 0 0 DIR=1
+SI1 -95.0001 -95 $ sampling range: 0 to Rmax (=1cm )
+SP1 0 1 $ weighting for x sampling: here constant
+SI2 -40 40 
+SP2 0 1
+SI3 10 90
+SP3 0 1  
 c
 c      tally for fw-CADIS method
 c fmesh24:n origin -100 -50 0
@@ -107,5 +113,5 @@ e44     1.0000E-08 3.0000E-08 5.0000E-08 1.0000E-07 2.2500E-07
         6.3763E+00 2.0000E+01
 fm44    -1.0 3 -1
 c
-nps 1000000
+nps 10000000
 print

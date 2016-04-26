@@ -93,16 +93,15 @@ c
 SDEF POS=200 550 150 AXS=1 0 0 EXT=0 RAD=d1 PAR=1 ERG=48.5 VEC=1 0 0 DIR=1
 SI1 0 5 $ radial sampling range: 0 to Rmax 
 SP1 -21 1 $ radial sampling weighting: r^1 for disk
- 
 c
 c      tally for fw-CADIS method
-c fmesh24:n origin 0 0 0
-c         imesh 30 610 640
-c         jmesh 30 150 180 610 640  
-c         kmesh 300
-c         iints 3 58 3
-c         jints 3 12 3 22 3
-c         kints 30
+fmesh24:n origin 0 0 0
+         imesh 30 610 640
+         jmesh 30 150 180 610 640  
+         kmesh 300
+         iints 3 58 3
+         jints 3 12 3 22 3
+         kints 30
 c
 c       tally for CADIS method
 f44:n   31

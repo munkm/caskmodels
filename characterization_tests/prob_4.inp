@@ -38,10 +38,10 @@ c
 c -------------------------------------------------------------------
 c
 c boundaries
-*1    px   0
+1     px   0
 2     px   50
 3     px   100
-*4    px   150
+4     px   150
 5     py   0
 6     py   200
 7     pz   40
@@ -102,8 +102,16 @@ m4    6000.70c 0.0449
       26057.70c 0.0202 
       26058.70c 0.0027
 c
-c
-sdef POS 10.0 100.00 100.00 PAR=1 ERG=10.0  
+c 
+SDEF X=d1 Y=d2 Z=d3 PAR=1 ERG=d4 VEC=1 0 0 DIR=1
+SI1 5 5.0001 $ sampling range: 0 to Rmax (=1cm )
+SP1 0 1 $ weighting for x sampling: here constant
+SI2 20 180 
+SP2 0 1
+SI3 50 150
+SP3 0 1
+c  Watt fission spectrum for U-235 thermal fission 
+SP4 -3 0.988 2.249 
 c
 c      tally for fw-CADIS method
 c fmesh24:n origin -100 -50 0
@@ -124,5 +132,5 @@ e44     1.0000E-08 3.0000E-08 5.0000E-08 1.0000E-07 2.2500E-07
         6.3763E+00 2.0000E+01
 fm44    -1.0 3 -1
 c
-nps 1000000
+nps 10000000
 print
