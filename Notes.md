@@ -1,8 +1,7 @@
-### Transportation Cask Images
-* The transportation cask images and their descriptions are in the [private repo](https://github.com/munkm/caskmodels_private/blob/master/Notes.md)
-
 ### VCC Dry Cask Images
-* Any images of the dry cask storage are fine to put on the public site. They have been changed according to public documents (see below). Any images of the transportation cask and modifications before the final dry cask are on the [private repo](https://github.com/munkm/caskmodels_private/blob/master/Notes.md)
+* Any images of the dry cask storage are fine to put on the public site. They have been changed according to public documents (see below). 
+i[//]: # (Any images of the transportation cask and modifications before the
+final dry cask are on the [private repo](https://github.com/munkm/caskmodels_private/blob/master/Notes.md))
 * This is a view of a vertical slice of the VCC dry cask modified according to the changes described in [Cask Information](./Cask-Information.md). Here you can see the entire cask. Seen in the concrete overpack are the cross-sections of the axial rebar rings as well as 2 of the vertical rebars. Seen at the top of the cask is the shield plug and cask lid. At the bottom of the cask a slice through the weldment structure is seen, along with 2 of the air inlets which protrude from the base weldment to the outside of the cask. 
 ![image_1]
 (http://munkm.github.io/caskmodels/Images/VCC_center_side_profile.png)
@@ -35,4 +34,8 @@ this number can be used to find the documents in the ADAMS system. These documen
 
 
 ***
+
+### Transportation Cask Images
+* The transportation cask images and their descriptions are in the [private repo](https://github.com/munkm/caskmodels_private/blob/master/Notes.md)
+
 

@@ -1,4 +1,4 @@
-This page contains the mcnp and ADVANTG input files for the simple characterization problems we will be using to characterize the success of the method.  
+This page contains the MCNP and ADVANTG input files for the simple characterization problems we will be using to characterize the success of the method.  
 ***
 The input files for mcnp are .i files
 The input files for advantg are .py files
