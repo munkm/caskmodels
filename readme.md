@@ -10,5 +10,9 @@ Notes from weekly research meetings are [here](./Meeting-Notes.md)
 [Weekly Updates](./Weekly-Updates.md) is a place where the work progress each 
 week from both Garrett and Madicken is tracked and recorded.
 
+[Characterization Tests](./characterization_tests/readme.md) are the simple
+characterization problems we will be using to characterize the success of the
+method.
+
 [//]: # (![Khaleeeeeesssiiiiiiiii] (http://i.imgur.com/mM40QYf.jpg))
  
