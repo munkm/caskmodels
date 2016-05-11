@@ -14,5 +14,7 @@ week from both Garrett and Madicken is tracked and recorded.
 characterization problems we will be using to characterize the success of the
 method.
 
+You can find out about the [codes](./codes/readme.md) and their use as well.
+
 [//]: # (![Khaleeeeeesssiiiiiiiii] (http://i.imgur.com/mM40QYf.jpg))
  
