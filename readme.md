@@ -1,5 +1,5 @@
 This is the research page for the Cask Modelling project. 
-[//]: # It is a place where very magical things will happen. Often. 
+[//]: # (It is a place where very magical things will happen. Often.) 
 ***
 [//]: # A link to the private repo is [here](https://github.com/munkm/caskmodels_private)
 
