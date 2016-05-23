@@ -63,7 +63,7 @@ c     support surfaces
 27    pz   139.0
 28    pz   141.0
 c
-c           reflective boundaries the source
+c    
 c
 c
 50  rpp   135 145 95 105 100 110                        $ NaI detector 10x10x10
