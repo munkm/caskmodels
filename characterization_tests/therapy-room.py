@@ -3,7 +3,7 @@ from advantg.driver import run
 inp = {
     "method":                    "cadis",
     "outputs":                  {"mcnp", "silo", "response"},
-    "mcnp_input":                "prob_4",
+    "mcnp_input":                "therapy",
     "mcnp_tallies":              44,
     "mcnp_material_names":      { 1:  "air",
                                   2:  "water",
