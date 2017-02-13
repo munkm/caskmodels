@@ -42,10 +42,10 @@ c boundaries
 *6    pz   200
 c
 c            maze surfaces
-12   px   100
-13   px   200
-14   px   300
-15   px   400
+12   px   75
+13   px   175
+14   px   325
+15   px   425
 16   py   250
 17   py   350
 c

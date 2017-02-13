@@ -12,7 +12,6 @@ inp = {
     "denovo_quadrature":         "qr",
     "denovo_quad_order":          10,
     "denovo_pn_order":             2,
-    "denovo_hdf5_angles":        True,
     "mesh_x":                    [-100, -50, 50, 100],
     "mesh_x_ints":               [      25, 100,  25],
     "mesh_y":                    [-50, -10, 40,  50],

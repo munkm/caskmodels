@@ -13,7 +13,7 @@ inp = {
     "denovo_quadrature":         "qr",
     "denovo_quad_order":          10,
     "denovo_pn_order":             2,
-    "mesh_x":                    [0, 100, 200, 300, 400, 500],
+    "mesh_x":                    [0, 75, 175, 325, 425, 500],
     "mesh_x_ints":               [  10, 20,   20,  20, 10],
     "mesh_y":                    [0, 250, 350, 450],
     "mesh_y_ints":               [    50, 20, 10],
