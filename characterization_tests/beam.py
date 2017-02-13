@@ -12,12 +12,12 @@ inp = {
     "denovo_quadrature":         "qr",
     "denovo_quad_order":          10,
     "denovo_pn_order":             2,
-    "mesh_x":                    [0, 200],
-    "mesh_x_ints":               [   50],
-    "mesh_y":                    [0, 200],
-    "mesh_y_ints":               [   50],
-    "mesh_z":                    [0, 100],
-    "mesh_z_ints":               [    25]
+    "mesh_x":                    [0, 45, 155, 200],
+    "mesh_x_ints":               [   5, 25, 5],
+    "mesh_y":                    [0, 45, 155, 200],
+    "mesh_y_ints":               [   5, 25, 5],
+    "mesh_z":                    [0, 45, 155, 200],
+    "mesh_z_ints":               [    5, 25, 5]
 }
 
 run(inp)
