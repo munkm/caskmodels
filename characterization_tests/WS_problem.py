@@ -4,7 +4,7 @@ inp = {
     "method":                    "cadis",
     "outputs":                  {"mcnp", "silo", "response"},
     "mcnp_input":                "WSprob",
-    "mcnp_tallies":              44,
+    "mcnp_tallies":              24,
     "mcnp_material_names":      { 1:  "Air",
                                   2:  "Carbon Steel",
                                   3:  "Water",
