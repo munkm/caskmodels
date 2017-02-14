@@ -36,10 +36,10 @@ c
 c boundaries
 1    px   0
 2    px   500
-*3    py   0
+3    py   0
 4    py   450
-*5    pz   0 
-*6    pz   200
+5    pz   0 
+6    pz   200
 c
 c            maze surfaces
 12   px   75
