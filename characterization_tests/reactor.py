@@ -13,7 +13,7 @@ inp = {
     "anisn_library":             "27n19g",
     "denovo_quadrature":         "qr",
     "denovo_quad_order":          10,
-    "denovo_pn_order":             2,
+    "denovo_pn_order":             3,
     "mesh_x":                    [-2100, -1650, -530, 530, 1650, 2100],
     "mesh_x_ints":               [    30,     112,   106, 112,  30 ],
     "mesh_y":                    [-2100, -1650, -530, 530, 1650, 2100],
