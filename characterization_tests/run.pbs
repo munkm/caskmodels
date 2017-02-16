@@ -1,0 +1,21 @@
+#!/bin/sh
+# Problem: maze2
+# PID: 2017-2-14
+#
+#PBS -N adv_maze2
+#PBS -o maze2.pbs.out
+#PBS -j oe
+#PBS -M munkm@ornl.gov
+#PBS -l walltime=20:00
+#PBS -l nodes=1:ppn=16
+LAUNCHER=/opt/openmpi-1.6.5-gcc/bin/mpiexec
+LAUNCHER_ARGS=""
+ADVANTG=/home/m15/install/advantg/bin/advantg
+INPUT=maze2.py
+
+cd "/home/m15/munk_analysis/demonstration/maze2"
+echo "Beginning PBS execution at $(date)"
+echo ">>> PBS nodes: ${PBS_NUM_NODES}"
+echo ">>> PBS cores per node: ${PBS_NUM_PPN}"
+"${ADVANTG}" "${INPUT}"
+echo ">>> Finished PBS execution at $(date)"
