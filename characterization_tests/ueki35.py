@@ -1,4 +1,6 @@
 from advantg.driver import run
+from advantg.utils import time_this
+import json
 
 inp = {
     "method":                 "cadis",
@@ -22,3 +24,6 @@ inp = {
 }
 
 run(inp)
+data = dict(time_this.times)
+with open('./timing.json', 'w') as jf:
+    json.dump(data, jf, sort_keys=True,indent=0)
