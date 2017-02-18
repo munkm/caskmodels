@@ -92,14 +92,35 @@ c
 c
 c --- volumetric fission source inside a rectangular parallelepiped
 SDEF X=d1 Y=d2 Z=d3 ERG=d4 PAR=1
-SI1 0.0 53.0 $ x-range limits for source volume
-SP1 0 1 $ uniform probability over x-range
-SI2 0.0 50.0 $ y-range limits for source volume
-SP2 0 1 $ uniform probability over y-range
-SI3 0.0 15.0 $ z-range limits for source volume
-SP3 0 1 $ uniform probability over z-range
+SI1 0.0 26.5 53.0 $ x-range limits for source volume
+SP1 0 0.5 0.5 $ uniform probability over x-range
+SI2 0.0 25.0 50.0 $ y-range limits for source volume
+SP2 0 0.5 0.5 $ uniform probability over y-range
+SI3 0.0 7.5 15.0 $ z-range limits for source volume
+SP3 0 0.5 0.5 $ uniform probability over z-range
 c  Watt fission spectrum for U-235 thermal fission 
 SP4 -3 0.988 2.249  
+SI4    1.000000e-11 9.458907e-02 1.518546e-01 2.009263e-01 2.455698e-01
+       2.873352e-01 3.270501e-01 3.652217e-01 4.021894e-01 4.381943e-01
+       4.734157e-01 5.079921e-01 5.420329e-01 5.756272e-01 6.088486e-01
+       6.417593e-01 6.744124e-01 7.068539e-01 7.391242e-01 7.712594e-01
+       8.032916e-01 8.352499e-01 8.671611e-01 8.990496e-01 9.309385e-01
+       9.628489e-01 9.948011e-01 1.026814e+00 1.058907e+00 1.091096e+00
+       1.123399e+00 1.155832e+00 1.188412e+00 1.221155e+00 1.254076e+00
+       1.287191e+00 1.320515e+00 1.354066e+00 1.387857e+00 1.421905e+00
+       1.456226e+00 1.490836e+00 1.525753e+00 1.560992e+00 1.596573e+00
+       1.632512e+00 1.668829e+00 1.705542e+00 1.742671e+00 1.780238e+00
+       1.818263e+00 1.856769e+00 1.895781e+00 1.935321e+00 1.975417e+00
+       2.016095e+00 2.057384e+00 2.099315e+00 2.141919e+00 2.185230e+00
+       2.229285e+00 2.274122e+00 2.319781e+00 2.366308e+00 2.413747e+00
+       2.462150e+00 2.511572e+00 2.562069e+00 2.613705e+00 2.666548e+00
+       2.720673e+00 2.776159e+00 2.833095e+00 2.891577e+00 2.951710e+00
+       3.013613e+00 3.077412e+00 3.143251e+00 3.211291e+00 3.281708e+00
+       3.354703e+00 3.430504e+00 3.509368e+00 3.591588e+00 3.677502e+00
+       3.767504e+00 3.862049e+00 3.961676e+00 4.067024e+00 4.178864e+00
+       4.298129e+00 4.425973e+00 4.563844e+00 4.713589e+00 4.877624e+00
+       5.059188e+00 5.262777e+00 5.494888e+00 5.765428e+00 6.090633e+00
+       6.500000e+00 26i 2.000000e+01
 c
 c      tally for fw-CADIS method
 fmesh24:n origin 0 0 0

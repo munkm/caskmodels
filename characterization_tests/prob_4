@@ -106,12 +106,13 @@ c
 SDEF X=d1 Y=d2 Z=d3 PAR=1 ERG=d4 VEC=1 0 0 DIR=1
 SI1 5 5.0001 $ sampling range: 0 to Rmax (=1cm )
 SP1 0 1 $ weighting for x sampling: here constant
-SI2 20 180 
-SP2 0 1
-SI3 50 150
-SP3 0 1
+SI2 20 100 180 
+SP2 0 0.5 0.5
+SI3 50 100 150
+SP3 0 0.5 0.5
 c  Watt fission spectrum for U-235 thermal fission 
 SP4 -3 0.988 2.249 
+SI4 2e-11 99ilog 2e1
 c
 c      tally for fw-CADIS method
 c fmesh24:n origin -100 -50 0

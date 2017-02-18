@@ -89,10 +89,10 @@ c
 SDEF X=d1 Y=d2 Z=d3 PAR=1 ERG=10.0 VEC=1 0 0 DIR=1
 SI1 -95.0001 -95 $ sampling range: 0 to Rmax (=1cm )
 SP1 0 1 $ weighting for x sampling: here constant
-SI2 -40 40 
-SP2 0 1
-SI3 10 90
-SP3 0 1  
+SI2 -40 -20 0 20 40 
+SP2 0 0.2 0.2 0.2 0.2
+SI3 10 30 50 70 90
+SP3 0 0.2 0.2 0.2 0.2  
 c
 c      tally for fw-CADIS method
 c fmesh24:n origin -100 -50 0

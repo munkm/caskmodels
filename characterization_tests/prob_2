@@ -91,7 +91,11 @@ m4    1001.70c -0.01
       26000.50c -0.014
 c
 c
-sdef POS 150.00 6.00 145.00 PAR=1 ERG=10.0  
+sdef POS 150.00 6.00 145.00 PAR=1 ERG=d1
+c  Watt fission spectrum for U-235 thermal fission 
+SP1 -3 0.988 2.249 
+SI1 2e-11 99ilog 2e1
+c   
 c
 c      tally for fw-CADIS method
 c fmesh24:n origin -100 -50 0
