@@ -5,12 +5,12 @@ c              Cell Cards
 c
 c -------------------------------------------------------------------
 1     1  4.96370e-5    1 -2 3 -4 11 -21    imp:n=1
-2     1  4.96370e-5    1 -2 3 -4 24 -41 50 imp:n=1
+2     1  4.96370e-5    1 -2 3 -4 24 -41 imp:n=1
 c
 c     air component of maze
 11    1  4.96370e-5    1 -2 31 -32  21 -23 imp:n=1
 12    1  4.96370e-5    1 -2 32 -33  22 -23 imp:n=1
-13    1  4.96370e-5    1 -2 33 -34  22 -24 imp:n=1
+13    1  4.96370e-5    1 -2 33 -34  22 -24 50 imp:n=1
 c
 c     solid component of maze
 21    2  7.83423e-2         1 -2  3 -31  21 -23 imp:n=1
@@ -50,7 +50,7 @@ c             area containing the detector
 41  px    100                                           $ Other back wall
 c
 c
-50  rpp  70 80  25 35  45 55                          $ NaI detector
+50  rpp 75 85  25 35  45 55                          $ NaI detector
 
 c -------------------------------------------------------------------
 c
@@ -90,7 +90,7 @@ m3    11023.70c -0.1534       $ Na =  22.989770
       53127.70c -0.8466       $ I  = 126.904470
 c
 c
-sdef POS -90.0 -30.0 50.0 PAR=1 ERG=d1
+sdef POS -75.0 -30.0 50.0 PAR=1 ERG=d1
 c  Watt fission spectrum for U-235 thermal fission 
 SP1 -3 0.988 2.249 
 SI1 2e-11 99ilog 2e1
