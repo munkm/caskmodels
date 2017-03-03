@@ -3,7 +3,8 @@ from advantg.utils import time_this
 import json
 
 inp = {
-    "method":                    "cadis",
+    "method":                 "cadisangle",
+    "omega_quantify_anisotropy": True,
     "outputs":                  {"mcnp", "silo", "response"},
     "mcnp_input":                "therapy",
     "mcnp_tallies":              44,

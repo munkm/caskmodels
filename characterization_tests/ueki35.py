@@ -3,7 +3,8 @@ from advantg.utils import time_this
 import json
 
 inp = {
-    "method":                 "cadis",
+    "method":                 "cadisangle",
+    "omega_quantify_anisotropy": True,
     "mcnp_input":             "ueki35",
     "mcnp_tallies":           5,
     "mcnp_material_names":   {1: "paraffin",
