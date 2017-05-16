@@ -5,6 +5,7 @@ import json
 inp = {
     "method":                 "cadisangle",
     "omega_quantify_anisotropy": True,
+    "omega_quantify_anisotropy_silo": True,
     "mcnp_input":             "ueki35",
     "mcnp_tallies":           5,
     "mcnp_material_names":   {1: "paraffin",

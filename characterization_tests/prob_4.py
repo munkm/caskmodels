@@ -5,6 +5,7 @@ import json
 inp = {
     "method":                 "cadisangle",
     "omega_quantify_anisotropy": True,
+    "omega_quantify_anisotropy_silo": True,
     "outputs":                  {"mcnp", "silo", "response"},
     "mcnp_input":                "prob_4",
     "mcnp_tallies":              44,
