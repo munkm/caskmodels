@@ -3,7 +3,7 @@ from advantg.utils import time_this
 import json
 
 inp = {
-    "method":                    "cadis",
+    "method":                 "cadis",
     "outputs":                  {"mcnp", "silo", "response"},
     "mcnp_input":                "therapy",
     "mcnp_tallies":              44,
@@ -19,11 +19,11 @@ inp = {
     "denovo_y_blocks":             4,
     "denovo_z_blocks":             2,
     "mesh_x":                    [0, 30, 610, 640],
-    "mesh_x_ints":               [  3, 58,  3],
-    "mesh_y":                    [0, 30, 150, 180, 610, 640],
-    "mesh_y_ints":               [   3,  12,  3,  43,  3],
+    "mesh_x_ints":               [  10, 116,  10],
+    "mesh_y":                    [0, 30, 150, 210, 610, 640],
+    "mesh_y_ints":               [   10,  24,  30,  100,  10],
     "mesh_z":                    [0, 300],
-    "mesh_z_ints":               [   30]
+    "mesh_z_ints":               [   100]
 }
 
 run(inp)
